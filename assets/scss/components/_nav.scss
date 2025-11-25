@@ -7,6 +7,12 @@
     @include mixins.tablet {
         display: none;
     }
+    @include mixins.mobile {
+        display: none;
+    }
+    @include mixins.xs {
+        display: none;
+    }
     &__list {
         display: flex;
         align-items: center;

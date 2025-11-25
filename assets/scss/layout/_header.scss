@@ -4,48 +4,63 @@
 .header {
     display: flex;
     align-items: center;
-    padding: 24px var(--section-margin-desktop);
+    padding: 24px;
+    margin: 0 var(--section-margin-desktop);
     @include mixins.tablet {
         padding: 20px var(--section-margin-tablet);
+        margin: 0;
     }
     @include mixins.mobile {
         padding: 16px var(--section-margin-mobile);
+        margin: 0;
     }
     @include mixins.xs {
         padding: 16px var(--section-margin-mobile);
+        margin: 0;
     }
     &__inner {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: var(--gap-desktop);
-        @include mixins.tablet {
-            gap: var(--gap-tablet);
-        }
-        @include mixins.mobile {
-            gap: var(--gap-mobile);
-        }
-        @include mixins.xs {
-            gap: var(--gap-mobile);
-        }
+        gap: 8px;
     }
     &__actions {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 8px;
+        @include mixins.mobile {
+            width: max-content;
+        }
+        @include mixins.xs {
+            width: max-content;
+        }
         &-inner {
             display: flex;
             align-items: center;
-            gap: 8px
+            gap: 8px;
         }
         &-login {
             @include mixins.button;
             @include mixins.btn-ghost;
+
+            @include mixins.mobile {
+                display: none;
+            }
+            @include mixins.xs {
+                display: none;
+            }
         }
         &-signup {
             @include mixins.button;
             @include mixins.btn-secondary;
+
+            @include mixins.mobile {
+                display: none;
+            }
+            @include mixins.xs {
+                display: none;
+            }
         }
     }
 }

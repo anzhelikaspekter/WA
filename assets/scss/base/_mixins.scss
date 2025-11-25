@@ -218,7 +218,7 @@
 
 @mixin button-icon {
     & {
-        display: flex;
+        display: none;
         width: var(--btn-height-desktop);
         height: var(--btn-height-desktop);
         justify-content: center;
@@ -226,14 +226,17 @@
         border-radius: 12px;
     }
     @include tablet {
+        display: flex;
         width: var(--btn-height-tablet);
         height: var(--btn-height-tablet);
     }
     @include mobile {
+        display: flex;
         width: var(--btn-height-mobile);
         height: var(--btn-height-mobile);
     }
     @include xs {
+        display: flex;
         width: var(--btn-height-mobile);
         height: var(--btn-height-mobile);
     }

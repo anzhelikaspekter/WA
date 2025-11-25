@@ -2,8 +2,9 @@
 @use "../base/mixins";
 
 .lang-select {
-    width: 90px;
-    max-width: 90px;
+    width: 100%;
+    max-width: 80px;
+    min-width: 80px;
     position: relative;
     display: inline-flex;
     align-items: center;
