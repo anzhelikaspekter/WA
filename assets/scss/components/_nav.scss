@@ -1,0 +1,31 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.nav {
+    display: flex;
+    align-items: center;
+    @include mixins.tablet {
+        display: none;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__item {
+        display: flex;
+    }
+    &__link {
+        width: max-content;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+        -webkit-tap-highlight-color: transparent;
+        @include mixins.nav-link;
+        &:focus-visible {
+            outline: 2px solid var(--color-accent-primary);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+    }
+}

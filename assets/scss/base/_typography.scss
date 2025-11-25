@@ -1,0 +1,36 @@
+@use "mixins";
+@use "variables";
+
+
+body {
+    @include mixins.body-1;
+}
+
+h1 {
+    @include mixins.h1;
+}
+
+h2 {
+    @include mixins.h2;
+}
+
+h3 {
+    @include mixins.h3;
+}
+
+h4 {
+    @include mixins.h4;
+}
+
+.desc {
+    &--body-1 {
+        @include mixins.body-1;
+    }
+    &--body-2 {
+        @include mixins.body-2;
+    }
+}
+
+.caption {
+    @include mixins.caption;
+}

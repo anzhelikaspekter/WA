@@ -1,0 +1,24 @@
+/* CSS VARIABLES */
+@use "base/reset";
+@use "base/variables";
+@use "base/mixins";
+@use "base/typography";
+@use "base/scrollbar";
+
+@use "components/logo";
+@use "components/nav";
+@use "components/select";
+@use "components/button";
+@use "components/burger";
+@use "components/mobile-menu";
+
+@use "layout/header";
+
+
+[hidden] {
+    display: none;
+}
+
+body {
+    background: var(--color-neutral-50);
+}

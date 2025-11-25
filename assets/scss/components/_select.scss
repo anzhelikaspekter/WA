@@ -1,0 +1,23 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.lang-select {
+    width: 90px;
+    max-width: 90px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    &__toggle {
+        @include mixins.select;
+    }
+    &__icon {
+        @include mixins.icon;
+    }
+    &__list {
+        @include mixins.droplist;
+    }
+    &__option {
+        @include mixins.option;
+    }
+}

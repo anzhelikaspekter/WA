@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio)) {
+    all: unset;
+    display: revert;
+}
+
+table {
+    border-collapse: collapse;
+}

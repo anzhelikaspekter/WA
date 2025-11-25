@@ -1,0 +1,51 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px var(--section-margin-desktop);
+    @include mixins.tablet {
+        padding: 20px var(--section-margin-tablet);
+    }
+    @include mixins.mobile {
+        padding: 16px var(--section-margin-mobile);
+    }
+    @include mixins.xs {
+        padding: 16px var(--section-margin-mobile);
+    }
+    &__inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--gap-desktop);
+        @include mixins.tablet {
+            gap: var(--gap-tablet);
+        }
+        @include mixins.mobile {
+            gap: var(--gap-mobile);
+        }
+        @include mixins.xs {
+            gap: var(--gap-mobile);
+        }
+    }
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        &-inner {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+        &-login {
+            @include mixins.button;
+            @include mixins.btn-ghost;
+        }
+        &-signup {
+            @include mixins.button;
+            @include mixins.btn-secondary;
+        }
+    }
+}
