@@ -60,7 +60,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio)) {
+*:where(:not(html, iframe, canvas, img, svg, path, video, audio)) {
   all: unset;
   display: revert;
 }
@@ -562,24 +562,55 @@ html {
   max-width: 80px;
   min-width: 80px;
   position: relative;
-  display: inline-flex;
-  align-items: center;
+  position: relative;
   -webkit-tap-highlight-color: transparent;
 }
 .lang-select__toggle {
   width: 100%;
   height: var(--btn-height-desktop);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
   padding: 0 14px;
   border-radius: 12px;
-  color: var(--color-primary-dark);
   border: 1px solid var(--color-neutral-300);
   background: var(--color-neutral-50);
-  outline: none;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  font-family: var(--font-primary);
+  font-weight: var(--body2-weight);
+  line-height: var(--body2-line-height);
+  letter-spacing: var(--body2-letter-spacing);
+  color: var(--color-primary-dark);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.lang-select__toggle {
+  font-size: var(--body2-mobile);
+}
+@media (min-width: 320px) {
+  .lang-select__toggle {
+    font-size: calc(var(--body2-mobile) + (var(--body2-tablet) - var(--body2-mobile)) * (100vw - 320px) / (1440px - 320px));
+  }
+}
+@media (min-width: 1440px) {
+  .lang-select__toggle {
+    font-size: var(--body2-desktop);
+  }
+}
+.lang-select__toggle svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+.lang-select__toggle svg path {
+  stroke: var(--color-primary-dark);
+  -webkit-text-stroke-color: var(--color-primary-dark);
 }
 .lang-select__toggle:hover {
   color: var(--color-primary-dark);
@@ -592,6 +623,10 @@ html {
   background: var(--color-neutral-50);
   box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
 }
+.lang-select__toggle:active svg path {
+  stroke: var(--color-accent-thirdly);
+  -webkit-text-stroke-color: var(--color-accent-thirdly);
+}
 .lang-select__toggle:disabled {
   color: var(--color-primary-dark);
   border: 1px solid var(--color-neutral-300);
@@ -602,6 +637,19 @@ html {
 .lang-select__toggle:focus-visible {
   box-shadow: 0 0 0 2px rgba(15, 76, 129, 0.35);
   border-color: var(--color-accent-primary);
+}
+.lang-select__toggle.active {
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-accent-thirdly);
+  background: var(--color-neutral-50);
+  box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
+}
+.lang-select__toggle.active svg {
+  transform: rotate(180deg);
+}
+.lang-select__toggle.active svg path {
+  stroke: var(--color-accent-thirdly);
+  -webkit-text-stroke-color: var(--color-accent-thirdly);
 }
 @media (min-width: 768px) and (max-width: 1279.9px) {
   .lang-select__toggle {
@@ -621,32 +669,12 @@ html {
     border-radius: 10px;
   }
 }
-.lang-select__icon {
-  width: var(--icon-desktop);
-  height: var(--icon-desktop);
-  obkect-fit: contain;
-}
-@media (min-width: 768px) and (max-width: 1279.9px) {
-  .lang-select__icon {
-    width: var(--icon-tablet);
-    height: var(--icon-tablet);
-  }
-}
-@media (min-width: 465px) and (max-width: 767.9px) {
-  .lang-select__icon {
-    width: var(--icon-mobile);
-    height: var(--icon-mobile);
-  }
-}
-@media (max-width: 464.9px) {
-  .lang-select__icon {
-    width: var(--icon-mobile);
-    height: var(--icon-mobile);
-  }
-}
 .lang-select__list {
   width: 100%;
-  display: inline-flex;
+  height: 100%;
+  min-height: 240px;
+  max-height: 240px;
+  display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 8px;
@@ -656,6 +684,12 @@ html {
   background: var(--color-neutral-50);
   position: absolute;
   top: 110%;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.lang-select__list[hidden] {
+  display: none;
 }
 @media (min-width: 768px) and (max-width: 1279.9px) {
   .lang-select__list {
@@ -675,6 +709,8 @@ html {
 .lang-select__option {
   width: 100%;
   height: var(--btn-height-tablet);
+  max-height: var(--btn-height-tablet);
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;

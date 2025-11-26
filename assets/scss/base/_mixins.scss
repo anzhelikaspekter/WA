@@ -329,17 +329,40 @@
     & {
         width: 100%;
         height: var(--btn-height-desktop);
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 8px;
         padding: 0 14px;
         border-radius: 12px;
-        color: var(--color-primary-dark);
         border: 1px solid var(--color-neutral-300);
         background: var(--color-neutral-50);
-        outline: none;
         cursor: pointer;
+        appearance: none;
+        outline: none;
+        font-family: var(--font-primary);
+        font-weight: var(--body2-weight);
+        line-height: var(--body2-line-height);
+        letter-spacing: var(--body2-letter-spacing);
+        color: var(--color-primary-dark);
+        transition:
+            border-color 0.2s ease,
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+        @include fluid-type(var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
+    }
+
+    & svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+
+        transition: transform 0.2s ease;
+        transform-origin: center;
+        path {
+            stroke: var(--color-primary-dark);
+            -webkit-text-stroke-color: var(--color-primary-dark);
+        }
     }
     &:hover {
         color: var(--color-primary-dark);
@@ -351,6 +374,12 @@
         border: 1px solid var(--color-accent-thirdly);
         background: var(--color-neutral-50);
         box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
+        & svg {
+            path {
+                stroke: var(--color-accent-thirdly);
+                -webkit-text-stroke-color: var(--color-accent-thirdly);
+            }
+        }
     }
     &:disabled {
         color: var(--color-primary-dark);
@@ -362,6 +391,19 @@
     &:focus-visible {
         box-shadow: 0 0 0 2px rgba(15, 76, 129, 0.35);
         border-color: var(--color-accent-primary);
+    }
+    &.active {
+        color: var(--color-primary-dark);
+        border: 1px solid var(--color-accent-thirdly);
+        background: var(--color-neutral-50);
+        box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
+        & svg {
+            transform: rotate(180deg);
+            path {
+                stroke: var(--color-accent-thirdly);
+                -webkit-text-stroke-color: var(--color-accent-thirdly);
+            }
+        }
     }
     @include tablet {
         height: var(--btn-height-tablet);
@@ -380,7 +422,10 @@
 @mixin droplist {
     & {
         width: 100%;
-        display: inline-flex;
+        height: 100%;
+        min-height: 240px;
+        max-height: 240px;
+        display: flex;
         flex-direction: column;
         gap: 8px;
         padding: 8px;
@@ -390,6 +435,12 @@
         background: var(--color-neutral-50);
         position: absolute;
         top: 110%;
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    &[hidden] {
+        display: none;
     }
     @include tablet {
         border-radius: 12px;
@@ -406,6 +457,8 @@
     & {
         width: 100%;
         height: var(--btn-height-tablet);
+        max-height: var(--btn-height-tablet);
+        flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: flex-start;
