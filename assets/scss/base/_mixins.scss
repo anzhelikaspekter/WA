@@ -97,7 +97,7 @@
     }
     &.active {
         color: var(--color-primary-dark);
-        display: inline-block;
+        display: flex;
         position: relative;
         &::before {
             content: "";

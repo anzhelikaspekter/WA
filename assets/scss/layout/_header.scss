@@ -6,6 +6,7 @@
     align-items: center;
     padding: 24px;
     margin: 0 var(--section-margin-desktop);
+    position: relative;
     @include mixins.tablet {
         padding: 20px var(--section-margin-tablet);
         margin: 0;

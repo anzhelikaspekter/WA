@@ -42,11 +42,18 @@
     <!-- Preload & Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        as="style">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="preload" href="assets/css/style.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/style.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </noscript>
 </head>
 
 <body>
@@ -95,7 +102,7 @@
                             <svg class="lang-select__icon" width="14" height="14" viewBox="0 0 24 24"
                                 aria-hidden="true">
                                 <path d="M6 9l6 6 6-6" fill="none" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"  />
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
 
@@ -112,43 +119,46 @@
 
                 <!-- BURGER -->
                 <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <img src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon" width="24"
-                        height="24" />
+                    <img loading="lazy" src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon"
+                        width="24" height="24" />
                 </button>
             </div>
         </div>
         <!-- MOBILE NAV OVERLAY -->
-        <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-            <!-- Close button (иконка Х) -->
-            <button class="mobile-nav__close" aria-label="Close menu" aria-controls="mobile-menu">
-                <img src="assets/img/icons/close.svg" alt="" class="mobile-nav__close-icon" width="28" height="28" />
-            </button>
+        <div class="mobile-nav-overlay" hidden>
+            <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+                <!-- Close button (иконка Х) -->
+                <button class="mobile-nav__close" aria-label="Close menu" aria-controls="mobile-menu">
+                    <img loading="lazy" src="assets/img/icons/close.svg" alt="Close Menu" class="mobile-nav__close-icon"
+                        width="28" height="28" />
+                </button>
 
-            <!-- Menu list (центр экрана) -->
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item">
-                    <a href="#destinations" class="mobile-nav__link">Destinations</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#tours" class="mobile-nav__link">Top Tours</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#plan" class="mobile-nav__link">Plan Your Trip</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#reviews" class="mobile-nav__link">Reviews</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#contacts" class="mobile-nav__link">Contacts</a>
-                </li>
-            </ul>
+                <!-- Menu list (центр экрана) -->
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a href="#destinations" class="mobile-nav__link">Destinations</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#tours" class="mobile-nav__link">Top Tours</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#plan" class="mobile-nav__link">Plan Your Trip</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#reviews" class="mobile-nav__link">Reviews</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#contacts" class="mobile-nav__link">Contacts</a>
+                    </li>
+                </ul>
 
-            <!-- Bottom actions -->
-            <div class="mobile-nav__actions">
-                <a href="#" class="mobile-nav__login">Login</a>
-                <a href="#" class="mobile-nav__signup">Sign Up</a>
-            </div>
-        </nav>
+                <!-- Bottom actions -->
+                <div class="mobile-nav__actions">
+                    <a href="#" class="mobile-nav__login">Login</a>
+                    <a href="#" class="mobile-nav__signup">Sign Up</a>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- MAIN CONTENT -->
     <main class="main" id="main" hidden>
@@ -161,7 +171,9 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="assets/js/components/select.js"></script>
+    <script src="assets/js/components/select.js" defer></script>
+    <script src="assets/js/components/mobile-nav.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
