@@ -614,22 +614,48 @@
 
 @mixin icon {
     width: var(--icon-desktop);
+    min-width: var(--icon-desktop);
     height: var(--icon-desktop);
+    min-height: var(--icon-desktop);
     obkect-fit: contain;
 
     @include tablet {
         width: var(--icon-tablet);
+        min-width: var(--icon-tablet);
         height: var(--icon-tablet);
+        min-height: var(--icon-tablet);
     }
 
     @include mobile {
         width: var(--icon-mobile);
+        min-width: var(--icon-mobile);
         height: var(--icon-mobile);
+        min-height: var(--icon-mobile);
     }
 
     @include xs {
         width: var(--icon-mobile);
+        min-width: var(--icon-mobile);
         height: var(--icon-mobile);
+        min-height: var(--icon-mobile);
+    }
+}
+
+@mixin logo {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+
+    & img {
+        display: block;
+        width: 140px;
+        height: 30px;
+        -webkit-user-drag: none;
+        user-select: none;
+        object-fit: contain;
     }
 }
 
