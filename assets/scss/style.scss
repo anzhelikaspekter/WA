@@ -21,6 +21,10 @@
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--color-neutral-50);
 }
