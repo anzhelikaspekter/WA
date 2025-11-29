@@ -11,6 +11,7 @@
 @use "components/button";
 @use "components/burger";
 @use "components/mobile-menu";
+@use "components/ticker";
 
 @use "layout/header";
 @use "layout/footer";
@@ -24,18 +25,18 @@ body {
 }
 
 .section {
-    padding: var(--section-padding-desktop) 0;
-    margin: 0 var(--section-margin-desktop);
+    padding: var(--section-padding-desktop) var(--section-margin-desktop);
     @include mixins.tablet {
-        padding: var(--section-padding-tablet) 0;
-        margin: 0 var(--section-margin-tablet);
+        padding: var(--section-padding-tablet) var(--section-margin-tablet);
     }
     @include mixins.mobile {
-        padding: var(--section-padding-mobile) 0;
-        margin: 0 var(--section-margin-mobile);
+        padding: var(--section-padding-mobile) var(--section-margin-mobile);
     }
     @include mixins.xs {
-        padding: var(--section-padding-mobile) 0;
-        margin: 0 var(--section-margin-mobile);
+        padding: var(--section-padding-mobile) var(--section-margin-mobile);
     }
+}
+
+.visually-hidden {
+    @include mixins.visually-hidden;
 }

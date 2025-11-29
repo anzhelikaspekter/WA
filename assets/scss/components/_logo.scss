@@ -2,22 +2,7 @@
 @use "../base/mixins";
 
 .logo {
-    min-width: 120px;
-    max-width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-
-    & img {
-        display: block;
-        width: 100%;
-        max-width: 140px;
-        height: auto;
-        -webkit-user-drag: none;
-        user-select: none;
-        object-fit: contain;
-    }
+    @include mixins.logo;
 
     @include mixins.mobile {
         padding: 4px 0;

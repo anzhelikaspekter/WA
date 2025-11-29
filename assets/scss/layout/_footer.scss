@@ -19,14 +19,12 @@
         grid-template-columns: 277px 1fr 277px;
         grid-template-areas: "brand menu social";
         gap: var(--gutter-desktop);
-        padding: var(--section-padding-desktop) var(--section-margin-desktop);
         @include mixins.tablet {
             grid-template-columns: 277px 1fr;
             grid-template-areas:
                 "brand social"
                 "menu menu";
             gap: var(--gutter-tablet);
-            padding: var(--section-padding-tablet) var(--section-margin-tablet);
         }
         @include mixins.mobile {
             grid-template-columns: 1fr;
@@ -35,7 +33,6 @@
                 "menu"
                 "social";
             gap: var(--gutter-mobile);
-            padding: var(--section-padding-mobile) var(--section-margin-mobile);
         }
         @include mixins.xs {
             grid-template-columns: 1fr;
@@ -44,7 +41,6 @@
                 "menu"
                 "social";
             gap: var(--gutter-mobile);
-            padding: var(--section-padding-mobile) var(--section-margin-mobile);
         }
     }
     &__col {
@@ -273,15 +269,28 @@
         display: flex;
         align-items: center;
         gap: var(--gap-tablet);
-    }
-    &__item {
-        width: auto;
-        height: 16px;
-    }
-    &__link {
-        width: auto;
-        height: 16px;
-        cursor: pointer;
+        &--platforms {
+            & .dev__item {
+                width: max-content;
+                height: 16px;
+            }
+            & .dev__link {
+                width: max-content;
+                height: 16px;
+                cursor: pointer;
+            }
+        }
+        &--networks {
+            & .dev__item {
+                width: 16px;
+                height: 16px;
+            }
+            & .dev__link {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+        }
     }
     &__logo {
         width: 100%;

@@ -63,7 +63,7 @@
             <!-- LOGO -->
             <a href="/" class="logo" aria-label="Wanderlust Adventures — Home">
                 <img src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="140" height="32"
-                    loading="lazy">
+                    loading="lazy" decoding="async">
             </a>
             <!-- DESKTOP NAV -->
             <nav class="nav" aria-label="Primary navigation">
@@ -119,7 +119,7 @@
 
                 <!-- BURGER -->
                 <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <img loading="lazy" src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon"
+                    <img loading="lazy" decoding="async" src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon"
                         width="24" height="24">
                 </button>
             </div>
@@ -161,15 +161,57 @@
         </div>
     </header>
     <!-- MAIN CONTENT -->
-    <main class="main" id="main" hidden>
-        <!-- Content goes here -->
+    <main class="main" id="main">
+        <!-- TRICKER -->
+        <section class="tricker">
+            <h2 class="visually-hidden">Our Partners</h2>
+            <div class="tricker__inner" role="list">
+                <div class="tricker__content" id="tricker-items" role="listitem">
+                    <ul class="tricker__list">
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/emirates.svg" width="190" height="62"
+                                alt="Emirates" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/qatar.svg" width="190" height="62" alt="Qatar" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/lufthansa.svg" width="190" height="62"
+                                alt="Lufthansa" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/turkish-airlines.svg" width="190" height="62"
+                                alt="Turkish Airlines" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/airfrance.svg" width="190" height="62"
+                                alt="AirFrance" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/british-airways.svg" width="190" height="62"
+                                alt="British Airways" class="tricker__img">
+                        </li>
+
+                        <li class="tricker__logo">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/air-france-klm.svg" width="190" height="62"
+                                alt="AirFrance KLM" class="tricker__img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer" id="footer" role="contentinfo">
-        <div class="footer__top">
+        <div class="section footer__top">
             <section class="footer__col footer__col--brand">
                 <a href="/" class="logo" aria-label="Wanderlust Adventures — Home">
-                    <img loading="lazy" src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="160"
+                    <img loading="lazy" decoding="async" src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="160"
                         height="40">
                 </a>
 
@@ -210,7 +252,7 @@
                             <a href="#faq" class="footer-menu__link">FAQ</a>
                         </li>
                         <li class="footer-menu__item">
-                            <a href="#customer-support" class="footer-menu__link">Customer Support</a>
+                            <a href="#customer-support" class="footer-menu__link">Support</a>
                         </li>
                         <li class="footer-menu__item">
                             <a href="#policies" class="footer-menu__link">Travel Policies</a>
@@ -243,25 +285,25 @@
                         <li>
                             <a href="https://www.instagram.com/spekter.solutions" class="footer-social__link"
                                 aria-label="Instagram" target="_blank">
-                                <img src="assets/img/icons/instagram.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/instagram.svg" alt="" width="24" height="24">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/solutions.spekter" class="footer-social__link"
                                 aria-label="Facebook" target="_blank">
-                                <img src="assets/img/icons/facebook.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/facebook.svg" alt="" width="24" height="24">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.tiktok.com/@spekter.solutions" class="footer-social__link"
                                 aria-label="TikTok" target="_blank">
-                                <img src="assets/img/icons/tiktok.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/tiktok.svg" alt="" width="24" height="24">
                             </a>
                         </li>
                     </ul>
 
                     <button class="footer-social__top" aria-label="Scroll to top">
-                        <img src="assets/img/icons/btn-up.svg" alt="" width="20" height="20">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/btn-up.svg" alt="" width="20" height="20">
                     </button>
                 </div>
 
@@ -269,10 +311,12 @@
                     <p class="footer-social__label">Available On</p>
                     <div class="footer-social__inner--apps">
                         <a href="#" class="footer-social__store" aria-label="Get it on Google Play">
-                            <img src="assets/img/badges/google-play.svg" width="130" height="40" alt="Get it on Google Play">
+                            <img loading="lazy" decoding="async" src="assets/img/badges/google-play.svg" width="130" height="40"
+                                alt="Get it on Google Play">
                         </a>
                         <a href="#" class="footer-social__store" aria-label="Download on the App Store">
-                            <img src="assets/img/badges/app-store.svg" width="130" height="40" alt="Download on the App Store">
+                            <img loading="lazy" decoding="async" src="assets/img/badges/app-store.svg" width="130" height="40"
+                                alt="Download on the App Store">
                         </a>
                     </div>
                 </div>
@@ -284,32 +328,32 @@
         <div class="dev">
             <div class="dev__inner platforms">
                 <h3 class="dev__title">Professional Platforms</h3>
-                <ul class="dev__list">
+                <ul class="dev__list dev__list--platforms">
                     <li class="dev__item">
                         <a href="https://github.com/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/github.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/github.svg" width="20" height="20"
                                 alt="GitHub — Anzhelika Spekter" class="dev__logo" id="github">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://codepen.io/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/codepen.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/codepen.svg" width="20" height="20"
                                 alt="Codepen — Anzhelika Spekter" class="dev__logo" id="codepen">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.behance.net/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/behance.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/behance.svg" width="20" height="20"
                                 alt="Behance — Anzhelika Spekter" class="dev__logo" id="behance">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://dribbble.com/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/dribbble.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/dribbble.svg" width="20" height="20"
                                 alt="Dribbble — Anzhelika Spekter" class="dev__logo" id="dribbble">
                         </a>
                     </li>
@@ -318,32 +362,32 @@
             <p class="dev__caption caption"><span>Designed & Built by Anzhelika Spekter</span> <span>© 2025</span></p>
             <div class="dev__inner networks">
                 <h3 class="dev__title">Social Networks</h3>
-                <ul class="dev__list">
+                <ul class="dev__list dev__list--networks">
                     <li class="dev__item">
                         <a href="https://www.linkedin.com/in/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/linkedin.svg" width="100" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/linkedin.svg" width="100" height="20"
                                 alt="LinkedIn — Anzhelika Spekter" class="dev__logo" id="linkedin">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://instagram.com/spekter.solutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/instagram.svg" width="100" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/instagram.svg" width="100" height="20"
                                 alt="Instagram — Anzhelika Spekter" class="dev__logo" id="instagram">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.pinterest.com/spektersolutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/pinterest.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/pinterest.svg" width="20" height="20"
                                 alt="Pinterest — Anzhelika Spekter" class="dev__logo" id="pinterest">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.tiktok.com/@spekter.solutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" src="assets/img/personal/tiktok.svg" width="20" height="20"
+                            <img loading="lazy" decoding="async" src="assets/img/personal/tiktok.svg" width="20" height="20"
                                 alt="TikTok — Anzhelika Spekter" class="dev__logo" id="tiktok">
                         </a>
                     </li>
@@ -354,6 +398,7 @@
     <!-- Scripts -->
     <script src="assets/js/components/select.js" defer></script>
     <script src="assets/js/components/mobile-nav.js" defer></script>
+    <script src="assets/js/components/tricker.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </body>
 
