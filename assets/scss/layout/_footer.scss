@@ -101,7 +101,7 @@
     }
     &__desc {
         @include mixins.body-2;
-        &{
+        & {
             color: var(--color-neutral-700);
         }
     }
@@ -212,6 +212,10 @@
         flex-direction: column;
         gap: 4px;
         text-align: center;
+        @include mixins.body-2;
+        & {
+            color: var(--color-neutral-700);
+        }
         @include mixins.tablet {
             flex: 1 1 100%;
             order: 1;
@@ -261,6 +265,9 @@
     }
     &__title {
         @include mixins.caption;
+        & {
+            color: var(--color-neutral-700);
+        }
     }
     &__list {
         display: flex;
