@@ -13,7 +13,7 @@
 @use "components/mobile-menu";
 
 @use "layout/header";
-
+@use "layout/footer";
 
 [hidden] {
     display: none;
@@ -21,4 +21,21 @@
 
 body {
     background: var(--color-neutral-50);
+}
+
+.section {
+    padding: var(--section-padding-desktop) 0;
+    margin: 0 var(--section-margin-desktop);
+    @include mixins.tablet {
+        padding: var(--section-padding-tablet) 0;
+        margin: 0 var(--section-margin-tablet);
+    }
+    @include mixins.mobile {
+        padding: var(--section-padding-mobile) 0;
+        margin: 0 var(--section-margin-mobile);
+    }
+    @include mixins.xs {
+        padding: var(--section-padding-mobile) 0;
+        margin: 0 var(--section-margin-mobile);
+    }
 }

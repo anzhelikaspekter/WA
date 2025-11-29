@@ -1,0 +1,281 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-desktop);
+    @include mixins.tablet {
+        gap: var(--gutter-tablet);
+    }
+    @include mixins.mobile {
+        gap: var(--gutter-mobile);
+    }
+    @include mixins.xs {
+        gap: var(--gutter-mobile);
+    }
+    &__top {
+        display: grid;
+        grid-template-columns: 277px 1fr 277px;
+        grid-template-areas: "brand menu social";
+        gap: var(--gutter-desktop);
+        padding: var(--section-padding-desktop) var(--section-margin-desktop);
+        @include mixins.tablet {
+            grid-template-columns: 277px 1fr;
+            grid-template-areas:
+                "brand social"
+                "menu menu";
+            gap: var(--gutter-tablet);
+            padding: var(--section-padding-tablet) var(--section-margin-tablet);
+        }
+        @include mixins.mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "brand"
+                "menu"
+                "social";
+            gap: var(--gutter-mobile);
+            padding: var(--section-padding-mobile) var(--section-margin-mobile);
+        }
+        @include mixins.xs {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "brand"
+                "menu"
+                "social";
+            gap: var(--gutter-mobile);
+            padding: var(--section-padding-mobile) var(--section-margin-mobile);
+        }
+    }
+    &__col {
+        &--brand {
+            grid-area: brand;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-desktop);
+            @include mixins.tablet {
+                gap: var(--gap-tablet);
+            }
+            @include mixins.mobile {
+                gap: var(--gap-mobile);
+            }
+            @include mixins.xs {
+                gap: var(--gap-mobile);
+            }
+        }
+        &--menu {
+            grid-area: menu;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--gap-desktop);
+            @include mixins.desktop {
+                grid-area: 2;
+            }
+            @include mixins.tablet {
+                gap: var(--gap-tablet);
+            }
+            @include mixins.mobile {
+                flex-wrap: wrap;
+                gap: var(--gap-mobile);
+            }
+            @include mixins.xs {
+                flex-wrap: wrap;
+                gap: var(--gap-mobile);
+            }
+        }
+        &--social {
+            grid-area: social;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gutter-desktop);
+            @include mixins.tablet {
+                gap: var(--gutter-tablet);
+            }
+            @include mixins.mobile {
+                gap: var(--gutter-mobile);
+            }
+            @include mixins.xs {
+                gap: var(--gutter-mobile);
+            }
+        }
+    }
+    &__desc {
+        @include mixins.body-2;
+    }
+}
+
+.footer-menu {
+    &__group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @include mixins.mobile {
+            flex: 1 1 calc(50% - var(--gap-mobile));
+        }
+        @include mixins.xs {
+            flex: 1 1 calc(50% - var(--gap-mobile));
+        }
+    }
+    &__title {
+        @include mixins.h4;
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__item {
+        width: 100%;
+    }
+    &__link {
+        @include mixins.nav-footer-link;
+    }
+}
+
+.footer-social {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--gap-tablet);
+        &--apps {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--gap-tablet);
+        }
+    }
+    &__icons {
+        flex: 1;
+        height: max-content;
+        display: flex;
+        gap: var(--gap-tablet);
+    }
+    &__link {
+        @include mixins.icon;
+        & {
+            cursor: pointer;
+        }
+    }
+    &__top {
+        @include mixins.icon;
+    }
+    &__stores {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: max-content;
+        cursor: pointer;
+    }
+    &__label {
+        @include mixins.h4;
+    }
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px var(--section-margin-desktop);
+    @include mixins.tablet {
+        flex-wrap: wrap;
+        padding: 16px var(--section-margin-tablet);
+    }
+    @include mixins.mobile {
+        padding: 16px var(--section-margin-mobile);
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include mixins.xs {
+        padding: 16px var(--section-margin-mobile);
+        flex-direction: column;
+        justify-content: center;
+    }
+    & {
+        background: var(--color-neutral-100);
+        filter: grayscale(1);
+    }
+    &__caption {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+        @include mixins.tablet {
+            flex: 1 1 100%;
+            order: 1;
+        }
+        @include mixins.mobile {
+            order: 1;
+        }
+        @include mixins.xs {
+            order: 1;
+        }
+    }
+    &__inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @include mixins.desktop {
+            flex-wrap: wrap;
+        }
+        &.platforms {
+            @include mixins.tablet {
+                order: 2;
+            }
+            @include mixins.mobile {
+                order: 3;
+                text-align: center;
+            }
+            @include mixins.xs {
+                order: 3;
+                text-align: center;
+            }
+        }
+        &.networks {
+            align-items: flex-end;
+            @include mixins.tablet {
+                order: 3;
+            }
+            @include mixins.mobile {
+                order: 2;
+                text-align: center;
+            }
+            @include mixins.xs {
+                order: 2;
+                text-align: center;
+            }
+        }
+    }
+    &__title {
+        @include mixins.caption;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-tablet);
+    }
+    &__item {
+        width: auto;
+        height: 16px;
+    }
+    &__link {
+        width: auto;
+        height: 16px;
+        cursor: pointer;
+    }
+    &__logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

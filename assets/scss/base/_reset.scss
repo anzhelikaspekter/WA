@@ -13,12 +13,12 @@ ol {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box !important;
 }
 
 button {
@@ -57,6 +57,7 @@ p {
 body {
     min-height: 100vh;
     text-rendering: optimizeLegibility;
+    box-sizing: border-box !important;
 }
 
 *:where(:not(html, iframe, canvas, img, svg, path, video, audio)) {

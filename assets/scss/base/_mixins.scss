@@ -46,7 +46,7 @@
     font-weight: var(--h4-weight);
     line-height: var(--h4-line-height);
     letter-spacing: var(--h4-letter-spacing);
-    color: var(--color-neutral-700);
+    color: var(--color-primary-dark);
     @include fluid-type(var(--h4-mobile), var(--h4-tablet), var(--h4-desktop));
 }
 
@@ -131,8 +131,6 @@
 @mixin nav-footer-link {
     display: flex;
     padding: 4px 0;
-    justify-content: center;
-    align-items: center;
     gap: var(--btn-gap-desktop);
     flex-shrink: 0;
     border-radius: 12px;
@@ -164,17 +162,14 @@
     }
     @include tablet {
         height: 40px;
-        padding: 12px var(--btn-padding-tablet);
         gap: var(--btn-gap-tablet);
     }
     @include mobile {
         height: 36px;
-        padding: 12px var(--btn-padding-mobile);
         gap: var(--btn-gap-mobile);
     }
     @include xs {
         height: 36px;
-        padding: 12px var(--btn-padding-mobile);
         gap: var(--btn-gap-mobile);
     }
 }

@@ -63,7 +63,7 @@
             <!-- LOGO -->
             <a href="/" class="logo" aria-label="Wanderlust Adventures — Home">
                 <img src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="140" height="32"
-                    loading="eager" />
+                    loading="lazy">
             </a>
             <!-- DESKTOP NAV -->
             <nav class="nav" aria-label="Primary navigation">
@@ -99,7 +99,7 @@
                             <span class="lang-select__value">EN</span>
 
                             <!-- SVG icon -->
-                            <svg class="lang-select__icon" width="14" height="14" viewBox="0 0 24 24"
+                            <svg class="lang-select__icon" width="24" height="24" viewBox="0 0 24 24"
                                 aria-hidden="true">
                                 <path d="M6 9l6 6 6-6" fill="none" stroke="black" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -120,7 +120,7 @@
                 <!-- BURGER -->
                 <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                     <img loading="lazy" src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon"
-                        width="24" height="24" />
+                        width="24" height="24">
                 </button>
             </div>
         </div>
@@ -165,9 +165,190 @@
         <!-- Content goes here -->
     </main>
     <!-- FOOTER -->
-    <footer class="footer" id="footer" hidden>
-        <div class="container">
-            <p class="footer__text">© 2025 Wanderlust Adventures. All rights reserved.</p>
+    <footer class="footer" id="footer" role="contentinfo">
+        <div class="footer__top">
+            <section class="footer__col footer__col--brand">
+                <a href="/" class="logo" aria-label="Wanderlust Adventures — Home">
+                    <img loading="lazy" src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="160"
+                        height="40">
+                </a>
+
+                <p class="footer__desc">
+                    Plan your journey with ease and travel the world with confidence.
+                </p>
+            </section>
+
+            <nav class="footer__col footer__col--menu footer-menu" aria-label="Footer navigation">
+                <section class="footer-menu__group" aria-labelledby="footer-company">
+                    <h3 class="footer-menu__title" id="footer-company">Company</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a href="#about" class="footer-menu__link">About Us</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#story" class="footer-menu__link">Our Story</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#destinations" class="footer-menu__link">Destinations</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#tours" class="footer-menu__link">Top Tours</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#reviews" class="footer-menu__link">Reviews</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="footer-menu__group" aria-labelledby="footer-support">
+                    <h3 class="footer-menu__title" id="footer-support">Support</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a href="#help" class="footer-menu__link">Help Center</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#faq" class="footer-menu__link">FAQ</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#customer-support" class="footer-menu__link">Customer Support</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#policies" class="footer-menu__link">Travel Policies</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="footer-menu__group" aria-labelledby="footer-services">
+                    <h3 class="footer-menu__title" id="footer-services">Services</h3>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a href="#plan-trip" class="footer-menu__link">Plan Your Trip</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#flights" class="footer-menu__link">Flight Options</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#local-experiences" class="footer-menu__link">Local Experiences</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#personalized-trips" class="footer-menu__link">Personalized Trips</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+
+            <section class="footer__col footer__col--social footer-social" aria-label="Social links and app downloads">
+                <div class="footer-social__inner">
+                    <ul class="footer-social__icons" aria-label="Social media links">
+                        <li>
+                            <a href="https://www.instagram.com/spekter.solutions" class="footer-social__link"
+                                aria-label="Instagram" target="_blank">
+                                <img src="assets/img/icons/instagram.svg" alt="" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/solutions.spekter" class="footer-social__link"
+                                aria-label="Facebook" target="_blank">
+                                <img src="assets/img/icons/facebook.svg" alt="" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@spekter.solutions" class="footer-social__link"
+                                aria-label="TikTok" target="_blank">
+                                <img src="assets/img/icons/tiktok.svg" alt="" width="24" height="24">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <button class="footer-social__top" aria-label="Scroll to top">
+                        <img src="assets/img/icons/btn-up.svg" alt="" width="20" height="20">
+                    </button>
+                </div>
+
+                <div class="footer-social__stores" aria-label="Download our app">
+                    <p class="footer-social__label">Available On</p>
+                    <div class="footer-social__inner--apps">
+                        <a href="#" class="footer-social__store" aria-label="Get it on Google Play">
+                            <img src="assets/img/badges/google-play.svg" alt="Get it on Google Play">
+                        </a>
+                        <a href="#" class="footer-social__store" aria-label="Download on the App Store">
+                            <img src="assets/img/badges/app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="copyright">
+            <p class="caption">2025 © All rights Reserved.</p>
+        </div>
+        <div class="dev">
+            <div class="dev__inner platforms">
+                <h3 class="dev__title">Professional Platforms</h3>
+                <ul class="dev__list">
+                    <li class="dev__item">
+                        <a href="https://github.com/anzhelikaspekter" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/github.svg" width="20" height="20"
+                                alt="GitHub — Anzhelika Spekter" class="dev__logo" id="github">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://codepen.io/anzhelikaspekter" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/codepen.svg" width="20" height="20"
+                                alt="Codepen — Anzhelika Spekter" class="dev__logo" id="codepen">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://www.behance.net/anzhelikaspekter" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/behance.svg" width="20" height="20"
+                                alt="Behance — Anzhelika Spekter" class="dev__logo" id="behance">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://dribbble.com/anzhelikaspekter" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/dribbble.svg" width="20" height="20"
+                                alt="Dribbble — Anzhelika Spekter" class="dev__logo" id="dribbble">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="dev__caption caption"><span>Designed & Built by Anzhelika Spekter</span> <span>© 2025</span></p>
+            <div class="dev__inner networks">
+                <h3 class="dev__title">Social Networks</h3>
+                <ul class="dev__list">
+                    <li class="dev__item">
+                        <a href="https://www.linkedin.com/in/anzhelikaspekter" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/linkedin.svg" width="100" height="20"
+                                alt="LinkedIn — Anzhelika Spekter" class="dev__logo" id="linkedin">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://instagram.com/spekter.solutions" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/instagram.svg" width="100" height="20"
+                                alt="Instagram — Anzhelika Spekter" class="dev__logo" id="instagram">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://www.pinterest.com/spektersolutions" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/pinterest.svg" width="20" height="20"
+                                alt="Pinterest — Anzhelika Spekter" class="dev__logo" id="pinterest">
+                        </a>
+                    </li>
+                    <li class="dev__item">
+                        <a href="https://www.tiktok.com/@spekter.solutions" target="_blank" class="dev__link"
+                            rel="noopener noreferrer">
+                            <img loading="lazy" src="assets/img/personal/tiktok.svg" width="20" height="20"
+                                alt="TikTok — Anzhelika Spekter" class="dev__logo" id="tiktok">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
     <!-- Scripts -->

@@ -4,20 +4,17 @@
 .header {
     display: flex;
     align-items: center;
-    padding: 24px;
-    margin: 0 var(--section-margin-desktop);
+    padding: 24px var(--section-margin-desktop);
     position: relative;
+    z-index: 999;
     @include mixins.tablet {
         padding: 20px var(--section-margin-tablet);
-        margin: 0;
     }
     @include mixins.mobile {
         padding: 16px var(--section-margin-mobile);
-        margin: 0;
     }
     @include mixins.xs {
         padding: 16px var(--section-margin-mobile);
-        margin: 0;
     }
     &__inner {
         width: 100%;

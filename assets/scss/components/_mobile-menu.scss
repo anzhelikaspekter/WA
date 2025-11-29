@@ -48,7 +48,9 @@
     }
     &__link {
         @include mixins.nav-link;
-        width: 100%;
+        & {
+            width: 100%;
+        }
     }
     &__actions {
         width: 100%;
@@ -59,12 +61,16 @@
     &__login {
         @include mixins.button;
         @include mixins.btn-ghost;
-        flex: 1;
+        & {
+            flex: 1;
+        }
     }
     &__signup {
         @include mixins.button;
         @include mixins.btn-secondary;
-        flex: 1;
+        & {
+            flex: 1;
+        }
     }
 }
 
