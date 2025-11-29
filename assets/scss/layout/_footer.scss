@@ -101,6 +101,9 @@
     }
     &__desc {
         @include mixins.body-2;
+        &{
+            color: var(--color-neutral-700);
+        }
     }
 }
 

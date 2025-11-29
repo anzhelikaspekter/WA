@@ -496,21 +496,28 @@ html {
   font-weight: var(--nav-weight);
   line-height: var(--nav-line-height);
   letter-spacing: var(--nav-letter-spacing);
-  color: var(--color-neutral-500);
   cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: var(--body2-weight);
+  line-height: var(--body2-line-height);
+  letter-spacing: var(--body2-letter-spacing);
+  color: var(--color-neutral-500);
 }
 .nav__link {
-  font-size: var(--nav-mobile);
+  font-size: var(--body2-mobile);
 }
 @media (min-width: 320px) {
   .nav__link {
-    font-size: calc(var(--nav-mobile) + (var(--nav-tablet) - var(--nav-mobile)) * (100vw - 320px) / (1440px - 320px));
+    font-size: calc(var(--body2-mobile) + (var(--body2-tablet) - var(--body2-mobile)) * (100vw - 320px) / (1440px - 320px));
   }
 }
 @media (min-width: 1440px) {
   .nav__link {
-    font-size: var(--nav-desktop);
+    font-size: var(--body2-desktop);
   }
+}
+.nav__link {
+  color: var(--color-primary-dark);
 }
 .nav__link:hover {
   color: var(--color-accent-primary);
@@ -913,21 +920,28 @@ html {
   font-weight: var(--nav-weight);
   line-height: var(--nav-line-height);
   letter-spacing: var(--nav-letter-spacing);
-  color: var(--color-neutral-500);
   cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: var(--body2-weight);
+  line-height: var(--body2-line-height);
+  letter-spacing: var(--body2-letter-spacing);
+  color: var(--color-neutral-500);
 }
 .mobile-nav__link {
-  font-size: var(--nav-mobile);
+  font-size: var(--body2-mobile);
 }
 @media (min-width: 320px) {
   .mobile-nav__link {
-    font-size: calc(var(--nav-mobile) + (var(--nav-tablet) - var(--nav-mobile)) * (100vw - 320px) / (1440px - 320px));
+    font-size: calc(var(--body2-mobile) + (var(--body2-tablet) - var(--body2-mobile)) * (100vw - 320px) / (1440px - 320px));
   }
 }
 @media (min-width: 1440px) {
   .mobile-nav__link {
-    font-size: var(--nav-desktop);
+    font-size: var(--body2-desktop);
   }
+}
+.mobile-nav__link {
+  color: var(--color-primary-dark);
 }
 .mobile-nav__link:hover {
   color: var(--color-accent-primary);
@@ -1464,6 +1478,9 @@ body.no-scroll {
     font-size: var(--body2-desktop);
   }
 }
+.footer__desc {
+  color: var(--color-neutral-700);
+}
 
 .footer-menu__group {
   flex: 1;
@@ -1520,21 +1537,28 @@ body.no-scroll {
   font-weight: var(--nav-weight);
   line-height: var(--nav-line-height);
   letter-spacing: var(--nav-letter-spacing);
-  color: var(--color-neutral-500);
   cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: var(--body2-weight);
+  line-height: var(--body2-line-height);
+  letter-spacing: var(--body2-letter-spacing);
+  color: var(--color-neutral-500);
 }
 .footer-menu__link {
-  font-size: var(--nav-mobile);
+  font-size: var(--body2-mobile);
 }
 @media (min-width: 320px) {
   .footer-menu__link {
-    font-size: calc(var(--nav-mobile) + (var(--nav-tablet) - var(--nav-mobile)) * (100vw - 320px) / (1440px - 320px));
+    font-size: calc(var(--body2-mobile) + (var(--body2-tablet) - var(--body2-mobile)) * (100vw - 320px) / (1440px - 320px));
   }
 }
 @media (min-width: 1440px) {
   .footer-menu__link {
-    font-size: var(--nav-desktop);
+    font-size: var(--body2-desktop);
   }
+}
+.footer-menu__link {
+  color: var(--color-primary-dark);
 }
 .footer-menu__link:hover {
   color: var(--color-accent-primary);
