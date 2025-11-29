@@ -1215,21 +1215,21 @@ body.no-scroll {
 
 .tricker {
   filter: grayscale(1) opacity(0.5);
-  padding: var(--section-padding-desktop) 0;
+  padding: var(--section-margin-tablet) 0;
 }
 @media (min-width: 768px) and (max-width: 1279.9px) {
   .tricker {
-    padding: var(--section-padding-tablet) 0;
+    padding: var(--section-margin-tablet) 0;
   }
 }
 @media (min-width: 465px) and (max-width: 767.9px) {
   .tricker {
-    padding: var(--section-padding-mobile) 0;
+    padding: var(--section-margin-mobile) 0;
   }
 }
 @media (max-width: 464.9px) {
   .tricker {
-    padding: var(--section-padding-mobile) 0;
+    padding: var(--section-margin-mobile) 0;
   }
 }
 .tricker__inner {
@@ -2503,6 +2503,10 @@ body.no-scroll {
 
 [hidden] {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
