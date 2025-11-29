@@ -89,9 +89,11 @@
     font-weight: var(--nav-weight);
     line-height: var(--nav-line-height);
     letter-spacing: var(--nav-letter-spacing);
-    color: var(--color-neutral-500);
     cursor: pointer;
-    @include fluid-type(var(--nav-mobile), var(--nav-tablet), var(--nav-desktop));
+    @include body-2;
+    & {
+        color: var(--color-primary-dark);
+    }
     &:hover {
         color: var(--color-accent-primary);
     }
@@ -138,9 +140,11 @@
     font-weight: var(--nav-weight);
     line-height: var(--nav-line-height);
     letter-spacing: var(--nav-letter-spacing);
-    color: var(--color-neutral-500);
     cursor: pointer;
-    @include fluid-type(var(--nav-mobile), var(--nav-tablet), var(--nav-desktop));
+    @include body-2;
+    & {
+        color: var(--color-primary-dark);
+    }
     &:hover {
         color: var(--color-accent-primary);
     }
