@@ -1,0 +1,141 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.cta {
+    width: 100%;
+    height: 100%;
+    min-height: 472px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    background: url(./../img/content/cta.webp) lightgray 50% / cover no-repeat;
+    border-radius: var(--radius-lg);
+    padding: 135px 80px;
+    position: relative;
+    overflow: hidden;
+    @include mixins.tablet {
+        padding: 135px 80px;
+        min-height: 456px;
+    }
+    @include mixins.mobile {
+        padding: 100px 32px;
+        min-height: 454px;
+    }
+    @include mixins.xs {
+        padding: 100px 32px;
+        min-height: 454px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 800px;
+        opacity: 0.6;
+        background: linear-gradient(90deg, rgba(1, 10, 56, 0) 0%, #010a38 100%);
+        backdrop-filter: blur(2px);
+    }
+    &__inner {
+        width: 100%;
+        max-width: 650px;
+        position: relative;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--gutter-desktop);
+        @include mixins.tablet {
+            gap: var(--gutter-tablet);
+        }
+        @include mixins.mobile {
+            gap: var(--gutter-mobile);
+        }
+        @include mixins.xs {
+            gap: var(--gutter-mobile);
+        }
+    }
+    &__title-field {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-tablet);
+    }
+    &__title {
+        @include mixins.h2;
+        & {
+            color: var(--color-neutral-50);
+        }
+    }
+    &__desc {
+        @include mixins.body-2;
+        & {
+            color: var(--color-neutral-50);
+        }
+    }
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-desktop);
+    @include mixins.tablet {
+        gap: var(--gap-tablet);
+    }
+    @include mixins.mobile {
+        gap: var(--gap-mobile);
+    }
+    @include mixins.xs {
+        gap: var(--gap-mobile);
+    }
+    &__label {
+        @include mixins.btn-label;
+        @include mixins.visually-hidden;
+    }
+    &__controls {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap-desktop);
+        position: relative;
+        @include mixins.tablet {
+            gap: var(--gap-tablet);
+        }
+        @include mixins.mobile {
+            gap: var(--gap-mobile);
+            flex-direction: column;
+        }
+        @include mixins.xs {
+            gap: var(--gap-mobile);
+            flex-direction: column;
+        }
+    }
+    &__input {
+        @include mixins.input;
+        & {
+            width: 100%;
+        }
+        &-wrap {
+            width: 100%;
+            position: relative;
+            flex: 1;
+            z-index: 0;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                background: url("./../img/icons/mail.svg") no-repeat center / contain;
+                pointer-events: none;
+                z-index: 3;
+            }
+        }
+    }
+    &__btn {
+        @include mixins.button;
+        @include mixins.btn-primary;
+    }
+}

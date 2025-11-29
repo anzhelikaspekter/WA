@@ -14,6 +14,7 @@
 @use "components/ticker";
 
 @use "layout/header";
+@use "layout/cta";
 @use "layout/footer";
 
 [hidden] {
@@ -35,8 +36,4 @@ body {
     @include mixins.xs {
         padding: var(--section-padding-mobile) var(--section-margin-mobile);
     }
-}
-
-.visually-hidden {
-    @include mixins.visually-hidden;
 }

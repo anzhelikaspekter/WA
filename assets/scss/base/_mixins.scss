@@ -1,16 +1,20 @@
 @use "variables";
 
-@mixin fluid-type($min, $mid, $max, $minVW: 320px, $maxVW: 1440px) {
+@mixin fluid-type($min, $mobile, $tablet, $desktop) {
     & {
         font-size: $min;
     }
 
-    @media (min-width: $minVW) {
-        font-size: calc(#{$min} + (#{$mid} - #{$min}) * (100vw - #{$minVW}) / (#{$maxVW} - #{$minVW}));
+    @media (min-width: 465px) {
+        font-size: $mobile;
     }
 
-    @media (min-width: $maxVW) {
-        font-size: $max;
+    @media (min-width: 768px) {
+        font-size: $tablet;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: $desktop;
     }
 }
 
@@ -20,7 +24,7 @@
     line-height: clamp(var(--h1-line-height-mobile), calc(var(--h1-line-height) + 0.2vw), var(--h1-line-height));
     letter-spacing: var(--h1-letter-spacing);
     color: var(--color-primary-dark);
-    @include fluid-type(var(--h1-mobile), var(--h1-tablet), var(--h1-desktop));
+    @include fluid-type(var(--h1-mobile), var(--h1-mobile), var(--h1-tablet), var(--h1-desktop));
 }
 
 @mixin h2 {
@@ -29,7 +33,7 @@
     line-height: clamp(var(--h2-line-height-mobile), calc(var(--h2-line-height) + 0.2vw), var(--h2-line-height));
     letter-spacing: var(--h2-letter-spacing);
     color: var(--color-primary-dark);
-    @include fluid-type(var(--h2-mobile), var(--h2-tablet), var(--h2-desktop));
+    @include fluid-type(var(--h2-mobile), var(--h2-mobile), var(--h2-tablet), var(--h2-desktop));
 }
 
 @mixin h3 {
@@ -38,7 +42,7 @@
     line-height: var(--h3-line-height);
     letter-spacing: var(--h3-letter-spacing);
     color: var(--color-primary-dark);
-    @include fluid-type(var(--h3-mobile), var(--h3-tablet), var(--h3-desktop));
+    @include fluid-type(var(--h3-mobile), var(--h3-mobile), var(--h3-tablet), var(--h3-desktop));
 }
 
 @mixin h4 {
@@ -47,7 +51,7 @@
     line-height: var(--h4-line-height);
     letter-spacing: var(--h4-letter-spacing);
     color: var(--color-primary-dark);
-    @include fluid-type(var(--h4-mobile), var(--h4-tablet), var(--h4-desktop));
+    @include fluid-type(var(--h4-mobile), var(--h4-mobile), var(--h4-tablet), var(--h4-desktop));
 }
 
 @mixin body-1 {
@@ -56,7 +60,7 @@
     line-height: var(--body1-line-height);
     letter-spacing: var(--body1-letter-spacing);
     color: var(--color-neutral-700);
-    @include fluid-type(var(--body1-mobile), var(--body1-tablet), var(--body1-desktop));
+    @include fluid-type(var(--body1-mobile), var(--body1-mobile), var(--body1-tablet), var(--body1-desktop));
 }
 
 @mixin body-2 {
@@ -65,7 +69,7 @@
     line-height: var(--body2-line-height);
     letter-spacing: var(--body2-letter-spacing);
     color: var(--color-neutral-500);
-    @include fluid-type(var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
+    @include fluid-type(var(--body2-mobile), var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
 }
 
 @mixin caption {
@@ -74,7 +78,7 @@
     line-height: var(--caption-line-height);
     letter-spacing: var(--caption-letter-spacing);
     color: var(--color-neutral-500);
-    @include fluid-type(var(--caption-mobile), var(--caption-tablet), var(--caption-desktop));
+    @include fluid-type(var(--caption-mobile), var(--caption-mobile), var(--caption-tablet), var(--caption-desktop));
 }
 
 @mixin nav-link {
@@ -262,7 +266,7 @@
         letter-spacing: var(--btn-letter-spacing);
     }
 
-    @include fluid-type(var(--btn-mobile), var(--btn-tablet), var(--btn-desktop));
+    @include fluid-type(var(--btn-mobile), var(--btn-mobile), var(--btn-tablet), var(--btn-desktop));
 }
 
 @mixin btn-primary {
@@ -348,7 +352,7 @@
             border-color 0.2s ease,
             background-color 0.2s ease,
             box-shadow 0.2s ease;
-        @include fluid-type(var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
+        @include fluid-type(var(--body2-mobile), var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
     }
 
     & svg {
@@ -504,6 +508,87 @@
     }
 }
 
+@mixin input {
+    & {
+        width: 100%;
+        height: var(--btn-height-desktop);
+        padding: 0 14px 0 48px;
+        border-radius: 12px;
+        border: 1px solid var(--color-neutral-300);
+        background: var(--color-neutral-50);
+        cursor: text;
+        outline: none;
+        transition:
+            border-color 0.2s ease,
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        @include body-2;
+        @include fluid-type(var(--body2-mobile), var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
+        & {
+            color: var(--color-primary-dark);
+        }
+        &::placeholder {
+            text-align: left;
+        }
+    }
+    &:hover {
+        color: var(--color-primary-dark);
+        border: 1px solid var(--color-neutral-500);
+        background: var(--color-neutral-100);
+    }
+    &:active {
+        color: var(--color-primary-dark);
+        border: 1px solid var(--color-accent-thirdly);
+        background: var(--color-neutral-50);
+        box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
+        & svg {
+            path {
+                stroke: var(--color-accent-thirdly);
+                -webkit-text-stroke-color: var(--color-accent-thirdly);
+            }
+        }
+    }
+    &:disabled {
+        color: var(--color-primary-dark);
+        border: 1px solid var(--color-neutral-300);
+        background: var(--color-neutral-100);
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+    &:focus-visible {
+        box-shadow: 0 0 0 2px rgba(15, 76, 129, 0.35);
+        border-color: var(--color-accent-primary);
+    }
+    &.active {
+        color: var(--color-primary-dark);
+        border: 1px solid var(--color-accent-thirdly);
+        background: var(--color-neutral-50);
+        box-shadow: 0 0 3px 0 rgba(45, 110, 207, 0.15);
+        & svg {
+            transform: rotate(180deg);
+            path {
+                stroke: var(--color-accent-thirdly);
+                -webkit-text-stroke-color: var(--color-accent-thirdly);
+            }
+        }
+    }
+    @include tablet {
+        height: var(--btn-height-tablet);
+        border-radius: 12px;
+    }
+    @include mobile {
+        height: var(--btn-height-mobile);
+        border-radius: 10px;
+    }
+    @include xs {
+        height: var(--btn-height-mobile);
+        border-radius: 10px;
+    }
+}
+
 @mixin desktop {
     @media (min-width: (variables.$bp-tablet)) and (max-width: (variables.$bp-tablet - 0.1)) {
         @content;
@@ -617,7 +702,7 @@
     min-width: var(--icon-desktop);
     height: var(--icon-desktop);
     min-height: var(--icon-desktop);
-    obkect-fit: contain;
+    object-fit: contain;
 
     @include tablet {
         width: var(--icon-tablet);
@@ -667,15 +752,17 @@
 }
 
 @mixin visually-hidden {
-    position: absolute !important;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
+    & {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
 }
 
 @mixin media($breakpoint) {

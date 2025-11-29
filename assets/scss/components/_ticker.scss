@@ -35,6 +35,9 @@
         will-change: transform;
         animation: tricker 15s linear infinite;
     }
+    &__title {
+        @include mixins.visually-hidden;
+    }
     &__list {
         display: flex;
         align-items: center;

@@ -40,6 +40,7 @@
     <meta name="theme-color" content="#0D1117">
     <meta name="apple-mobile-web-app-status-bar" content="#0D1117">
     <!-- Preload & Preconnect -->
+    <link rel="preload" as="image" href="assets/img/content/cta.webp" imagesrcset="assets/img/content/cta.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload"
@@ -119,8 +120,8 @@
 
                 <!-- BURGER -->
                 <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <img loading="lazy" decoding="async" src="assets/img/icons/menu.svg" alt="Mobile Menu" class="burger__icon"
-                        width="24" height="24">
+                    <img loading="lazy" decoding="async" src="assets/img/icons/menu.svg" alt="Mobile Menu"
+                        class="burger__icon" width="24" height="24">
                 </button>
             </div>
         </div>
@@ -164,44 +165,73 @@
     <main class="main" id="main">
         <!-- TRICKER -->
         <section class="tricker">
-            <h2 class="visually-hidden">Our Partners</h2>
+            <h2 class="tricker__title">Our Partners</h2>
             <div class="tricker__inner" role="list">
                 <div class="tricker__content" id="tricker-items" role="listitem">
                     <ul class="tricker__list">
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/emirates.svg" width="190" height="62"
-                                alt="Emirates" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/emirates.svg" width="190"
+                                height="62" alt="Emirates" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/qatar.svg" width="190" height="62" alt="Qatar" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/qatar.svg" width="190"
+                                height="62" alt="Qatar" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/lufthansa.svg" width="190" height="62"
-                                alt="Lufthansa" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/lufthansa.svg" width="190"
+                                height="62" alt="Lufthansa" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/turkish-airlines.svg" width="190" height="62"
-                                alt="Turkish Airlines" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/turkish-airlines.svg"
+                                width="190" height="62" alt="Turkish Airlines" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/airfrance.svg" width="190" height="62"
-                                alt="AirFrance" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/airfrance.svg" width="190"
+                                height="62" alt="AirFrance" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/british-airways.svg" width="190" height="62"
-                                alt="British Airways" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/british-airways.svg"
+                                width="190" height="62" alt="British Airways" class="tricker__img">
                         </li>
 
                         <li class="tricker__logo">
-                            <img loading="lazy" decoding="async" src="assets/img/partners/air-france-klm.svg" width="190" height="62"
-                                alt="AirFrance KLM" class="tricker__img">
+                            <img loading="lazy" decoding="async" src="assets/img/partners/air-france-klm.svg"
+                                width="190" height="62" alt="AirFrance KLM" class="tricker__img">
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <section class="section">
+            <div class="cta">
+                <div class="cta__inner">
+                    <div class="cta__title-field">
+                        <h2 class="cta__title">Stay Inspired. Travel Smarter.</h2>
+                        <p class="cta__desc">Get curated travel tips, seasonal highlights, and exclusive updates from
+                            Wanderlust Adventures — straight to your inbox.</p>
+                    </div>
+                    <form class="subscribe" action="#" method="post">
+                        <label for="subscribe-email" class="subscribe__label">
+                            Your email address
+                        </label>
+
+                        <div class="subscribe__controls">
+                            <div class="subscribe__input-wrap">
+                                <input type="email" id="subscribe-email" name="email" class="subscribe__input"
+                                    placeholder="Your email address" required autocomplete="email" />
+                            </div>
+
+                            <button type="submit" class="subscribe__btn">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -211,8 +241,8 @@
         <div class="section footer__top">
             <section class="footer__col footer__col--brand">
                 <a href="/" class="logo" aria-label="Wanderlust Adventures — Home">
-                    <img loading="lazy" decoding="async" src="assets/img/content/logo.svg" alt="Wanderlust Adventures Logo" width="160"
-                        height="40">
+                    <img loading="lazy" decoding="async" src="assets/img/content/logo.svg"
+                        alt="Wanderlust Adventures Logo" width="160" height="40">
                 </a>
 
                 <p class="footer__desc">
@@ -285,25 +315,29 @@
                         <li>
                             <a href="https://www.instagram.com/spekter.solutions" class="footer-social__link"
                                 aria-label="Instagram" target="_blank">
-                                <img loading="lazy" decoding="async" src="assets/img/icons/instagram.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/instagram.svg" alt=""
+                                    width="24" height="24">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/solutions.spekter" class="footer-social__link"
                                 aria-label="Facebook" target="_blank">
-                                <img loading="lazy" decoding="async" src="assets/img/icons/facebook.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/facebook.svg" alt=""
+                                    width="24" height="24">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.tiktok.com/@spekter.solutions" class="footer-social__link"
                                 aria-label="TikTok" target="_blank">
-                                <img loading="lazy" decoding="async" src="assets/img/icons/tiktok.svg" alt="" width="24" height="24">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/tiktok.svg" alt="" width="24"
+                                    height="24">
                             </a>
                         </li>
                     </ul>
 
                     <button class="footer-social__top" aria-label="Scroll to top">
-                        <img loading="lazy" decoding="async" src="assets/img/icons/btn-up.svg" alt="" width="20" height="20">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/btn-up.svg" alt="" width="20"
+                            height="20">
                     </button>
                 </div>
 
@@ -311,12 +345,12 @@
                     <p class="footer-social__label">Available On</p>
                     <div class="footer-social__inner--apps">
                         <a href="#" class="footer-social__store" aria-label="Get it on Google Play">
-                            <img loading="lazy" decoding="async" src="assets/img/badges/google-play.svg" width="130" height="40"
-                                alt="Get it on Google Play">
+                            <img loading="lazy" decoding="async" src="assets/img/badges/google-play.svg" width="130"
+                                height="40" alt="Get it on Google Play">
                         </a>
                         <a href="#" class="footer-social__store" aria-label="Download on the App Store">
-                            <img loading="lazy" decoding="async" src="assets/img/badges/app-store.svg" width="130" height="40"
-                                alt="Download on the App Store">
+                            <img loading="lazy" decoding="async" src="assets/img/badges/app-store.svg" width="130"
+                                height="40" alt="Download on the App Store">
                         </a>
                     </div>
                 </div>
@@ -332,29 +366,29 @@
                     <li class="dev__item">
                         <a href="https://github.com/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/github.svg" width="20" height="20"
-                                alt="GitHub — Anzhelika Spekter" class="dev__logo" id="github">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/github.svg" width="20"
+                                height="20" alt="GitHub — Anzhelika Spekter" class="dev__logo" id="github">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://codepen.io/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/codepen.svg" width="20" height="20"
-                                alt="Codepen — Anzhelika Spekter" class="dev__logo" id="codepen">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/codepen.svg" width="20"
+                                height="20" alt="Codepen — Anzhelika Spekter" class="dev__logo" id="codepen">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.behance.net/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/behance.svg" width="20" height="20"
-                                alt="Behance — Anzhelika Spekter" class="dev__logo" id="behance">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/behance.svg" width="20"
+                                height="20" alt="Behance — Anzhelika Spekter" class="dev__logo" id="behance">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://dribbble.com/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/dribbble.svg" width="20" height="20"
-                                alt="Dribbble — Anzhelika Spekter" class="dev__logo" id="dribbble">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/dribbble.svg" width="20"
+                                height="20" alt="Dribbble — Anzhelika Spekter" class="dev__logo" id="dribbble">
                         </a>
                     </li>
                 </ul>
@@ -366,29 +400,29 @@
                     <li class="dev__item">
                         <a href="https://www.linkedin.com/in/anzhelikaspekter" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/linkedin.svg" width="100" height="20"
-                                alt="LinkedIn — Anzhelika Spekter" class="dev__logo" id="linkedin">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/linkedin.svg" width="100"
+                                height="20" alt="LinkedIn — Anzhelika Spekter" class="dev__logo" id="linkedin">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://instagram.com/spekter.solutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/instagram.svg" width="100" height="20"
-                                alt="Instagram — Anzhelika Spekter" class="dev__logo" id="instagram">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/instagram.svg" width="100"
+                                height="20" alt="Instagram — Anzhelika Spekter" class="dev__logo" id="instagram">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.pinterest.com/spektersolutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/pinterest.svg" width="20" height="20"
-                                alt="Pinterest — Anzhelika Spekter" class="dev__logo" id="pinterest">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/pinterest.svg" width="20"
+                                height="20" alt="Pinterest — Anzhelika Spekter" class="dev__logo" id="pinterest">
                         </a>
                     </li>
                     <li class="dev__item">
                         <a href="https://www.tiktok.com/@spekter.solutions" target="_blank" class="dev__link"
                             rel="noopener noreferrer">
-                            <img loading="lazy" decoding="async" src="assets/img/personal/tiktok.svg" width="20" height="20"
-                                alt="TikTok — Anzhelika Spekter" class="dev__logo" id="tiktok">
+                            <img loading="lazy" decoding="async" src="assets/img/personal/tiktok.svg" width="20"
+                                height="20" alt="TikTok — Anzhelika Spekter" class="dev__logo" id="tiktok">
                         </a>
                     </li>
                 </ul>
