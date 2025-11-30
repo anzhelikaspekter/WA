@@ -747,27 +747,35 @@
 @mixin avatar {
     width: 56px;
     min-width: 56px;
+    max-width: 56px;
     height: 56px;
     min-height: 56px;
+    max-height: 56px;
     border-radius: 50px;
     object-fit: cover;
     @include tablet {
         width: 48px;
         min-width: 48px;
+        max-width: 48px;
         height: 48px;
         min-height: 48px;
+        max-height: 48px;
     }
     @include mobile {
         width: 42px;
         min-width: 42px;
+        max-width: 42px;
         height: 42px;
         min-height: 42px;
+        max-height: 42px;
     }
     @include xs {
         width: 42px;
         min-width: 42px;
+        max-width: 42px;
         height: 42px;
         min-height: 42px;
+        max-height: 42px;
     }
 }
 

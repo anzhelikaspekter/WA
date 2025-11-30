@@ -10,6 +10,7 @@
     border-radius: var(--radius-lg);
     padding: 135px 80px;
     position: relative;
+    content-visibility: auto;
     overflow: hidden;
     @include mixins.tablet {
         padding: 135px 80px;
