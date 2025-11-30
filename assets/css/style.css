@@ -1798,8 +1798,10 @@ body.no-scroll {
   order: -1;
   width: 56px;
   min-width: 56px;
+  max-width: 56px;
   height: 56px;
   min-height: 56px;
+  max-height: 56px;
   border-radius: 50px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1808,24 +1810,30 @@ body.no-scroll {
   .testimonial__author {
     width: 48px;
     min-width: 48px;
+    max-width: 48px;
     height: 48px;
     min-height: 48px;
+    max-height: 48px;
   }
 }
 @media (min-width: 465px) and (max-width: 767.9px) {
   .testimonial__author {
     width: 42px;
     min-width: 42px;
+    max-width: 42px;
     height: 42px;
     min-height: 42px;
+    max-height: 42px;
   }
 }
 @media (max-width: 464.9px) {
   .testimonial__author {
     width: 42px;
     min-width: 42px;
+    max-width: 42px;
     height: 42px;
     min-height: 42px;
+    max-height: 42px;
   }
 }
 @media (min-width: 768px) and (max-width: 1279.9px) {
@@ -1849,8 +1857,10 @@ body.no-scroll {
 .testimonial__avatar {
   width: 56px;
   min-width: 56px;
+  max-width: 56px;
   height: 56px;
   min-height: 56px;
+  max-height: 56px;
   border-radius: 50px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1859,24 +1869,30 @@ body.no-scroll {
   .testimonial__avatar {
     width: 48px;
     min-width: 48px;
+    max-width: 48px;
     height: 48px;
     min-height: 48px;
+    max-height: 48px;
   }
 }
 @media (min-width: 465px) and (max-width: 767.9px) {
   .testimonial__avatar {
     width: 42px;
     min-width: 42px;
+    max-width: 42px;
     height: 42px;
     min-height: 42px;
+    max-height: 42px;
   }
 }
 @media (max-width: 464.9px) {
   .testimonial__avatar {
     width: 42px;
     min-width: 42px;
+    max-width: 42px;
     height: 42px;
     min-height: 42px;
+    max-height: 42px;
   }
 }
 .testimonial__quote {
@@ -2030,6 +2046,7 @@ body.no-scroll {
   border-radius: var(--radius-lg);
   padding: 135px 80px;
   position: relative;
+  content-visibility: auto;
   overflow: hidden;
 }
 @media (min-width: 768px) and (max-width: 1279.9px) {
