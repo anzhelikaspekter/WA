@@ -1,0 +1,219 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.testimonials {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-desktop);
+    @media (min-width: 768px) and (max-width: 991.9px) {
+        flex-direction: column;
+        gap: var(--gap-desktop);
+    }
+    @include mixins.mobile {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+    }
+    @include mixins.xs {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+    }
+    &__header {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__subtitle {
+        @include mixins.caption;
+    }
+    &__title {
+        @include mixins.h2;
+    }
+    &__slider {
+        width: 100%;
+        flex: 1;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--gap-tablet);
+        @include mixins.tablet {
+            align-items: center;
+            justify-content: center;
+        }
+        @include mixins.mobile {
+            gap: 0;
+            align-items: center;
+            justify-content: center;
+        }
+        @include mixins.xs {
+            gap: 0;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__nav {
+        width: 24px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include mixins.mobile {
+            display: none;
+        }
+        @include mixins.xs {
+            display: none;
+        }
+    }
+    &__prev {
+        @include mixins.icon;
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        & .testimonials__icon {
+            transform: rotate(180deg);
+        }
+    }
+    &__next {
+        @include mixins.icon;
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    }
+    &__icon {
+        @include mixins.icon;
+    }
+    &__gallery {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-inner {
+            width: max-content;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 60px 60px 40px;
+            position: relative;
+            overflow: hidden;
+            @include mixins.tablet {
+                padding: 24px 30px 40px 24px;
+            }
+            @include mixins.mobile {
+                padding: 24px 30px 40px 24px;
+            }
+            @include mixins.xs {
+                padding: 24px 30px 40px 24px;
+            }
+        }
+    }
+}
+
+.testimonial {
+    width: 100%;
+    max-width: 377px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-desktop);
+    padding: var(--card-padding-desktop);
+    border-radius: var(--radius-lg);
+    background: var(--color-neutral-50);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    &__author {
+        position: absolute;
+        top: -28px;
+        left: -28px;
+        order: -1;
+        @include mixins.avatar;
+        @include mixins.tablet {
+            top: -24px;
+            left: -24px;
+        }
+        @include mixins.mobile {
+            top: -21px;
+            left: -21px;
+        }
+        @include mixins.xs {
+            top: -21px;
+            left: -21px;
+        }
+    }
+    &__avatar {
+        @include mixins.avatar;
+    }
+    &__quote {
+        @include mixins.body-2;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__name {
+        @include mixins.h4;
+    }
+    &__location {
+        @include mixins.caption;
+    }
+    &--main {
+        z-index: 3;
+    }
+    &--scnd,
+    &--thrd {
+        width: auto;
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        right: 10px;
+        bottom: 30px;
+        @include mixins.tablet {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+        @include mixins.mobile {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+        @include mixins.xs {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+    }
+    &--scnd {
+        z-index: 2;
+    }
+    &--thrd {
+        z-index: 1;
+    }
+    &--anim-fly-out {
+        position: absolute;
+        transform: translateY(-150%) !important;
+        opacity: 0;
+        transition: transform opacity 0.35s ease-out;
+    }
+    &--anim-main {
+        position: relative !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: opacity 0.35s ease-out;
+        transition-delay: 0.1s;
+    }
+    &:not(.testimonial--anim-main) {
+        opacity: 0.7;
+        transition: opacity 0.35s ease-out;
+        transition-delay: 0.1s;
+    }
+}
