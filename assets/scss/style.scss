@@ -11,6 +11,7 @@
 @use "components/button";
 @use "components/burger";
 @use "components/mobile-menu";
+@use "components/destination-card";
 @use "components/trip-card";
 @use "components/progress-card";
 @use "components/testimonial";
@@ -21,6 +22,7 @@
 @use "components/copyright";
 
 @use "layout/header";
+@use "layout/offer";
 @use "layout/tours";
 @use "layout/plan";
 @use "layout/testimonials";
