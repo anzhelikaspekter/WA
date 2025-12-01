@@ -1,0 +1,42 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer-social {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--gap-tablet);
+        &--apps {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--gap-tablet);
+        }
+    }
+    &__icons {
+        flex: 1;
+        height: max-content;
+        display: flex;
+        gap: var(--gap-tablet);
+    }
+    &__link {
+        @include mixins.icon;
+        & {
+            cursor: pointer;
+        }
+    }
+    &__top {
+        @include mixins.icon;
+    }
+    &__stores {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: max-content;
+        cursor: pointer;
+    }
+    &__label {
+        @include mixins.h4;
+    }
+}

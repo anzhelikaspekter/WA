@@ -1,0 +1,108 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.testimonial {
+    width: 100%;
+    max-width: 377px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-desktop);
+    padding: var(--card-padding-desktop);
+    border-radius: var(--radius-lg);
+    background: var(--color-neutral-50);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    &__author {
+        position: absolute;
+        top: -28px;
+        left: -28px;
+        order: -1;
+        @include mixins.avatar;
+        @include mixins.tablet {
+            top: -24px;
+            left: -24px;
+        }
+        @include mixins.mobile {
+            top: -21px;
+            left: -21px;
+        }
+        @include mixins.xs {
+            top: -21px;
+            left: -21px;
+        }
+    }
+    &__avatar {
+        @include mixins.avatar;
+    }
+    &__quote {
+        @include mixins.body-2;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__name {
+        @include mixins.h4;
+    }
+    &__location {
+        @include mixins.caption;
+    }
+    &--main {
+        z-index: 3;
+    }
+    &--scnd,
+    &--thrd {
+        width: auto;
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        right: 10px;
+        bottom: 30px;
+        @include mixins.tablet {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+        @include mixins.mobile {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+        @include mixins.xs {
+            top: 50px;
+            left: 50px;
+            right: 10px;
+            bottom: 20px;
+        }
+    }
+    &--scnd {
+        z-index: 2;
+    }
+    &--thrd {
+        z-index: 1;
+    }
+    &--anim-fly-out {
+        position: absolute;
+        transform: translateY(-150%) !important;
+        opacity: 0;
+        transition: transform opacity 0.35s ease-out;
+    }
+    &--anim-main {
+        position: relative !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: opacity 0.35s ease-out;
+        transition-delay: 0.1s;
+    }
+    &:not(.testimonial--anim-main) {
+        opacity: 0.7;
+        transition: opacity 0.35s ease-out;
+        transition-delay: 0.1s;
+    }
+}

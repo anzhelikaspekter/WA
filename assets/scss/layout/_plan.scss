@@ -1,0 +1,170 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.plan {
+    display: flex;
+    align-items: stretch;
+    gap: var(--gap-desktop);
+    @media (min-width: 768px) and (max-width: 991.9px) {
+        flex-direction: column;
+        gap: var(--gap-tablet);
+    }
+    @include mixins.mobile {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+    }
+    @include mixins.xs {
+        flex-direction: column;
+        gap: var(--gap-mobile);
+    }
+    &__inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &--visual {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 54px;
+                top: 28px;
+                width: 382px;
+                height: 382px;
+
+                background: radial-gradient(circle, rgba(130, 194, 94, 0.35), rgba(130, 194, 94, 0));
+                filter: blur(75px);
+                z-index: 0;
+                pointer-events: none;
+                @media (min-width: 768px) and (max-width: 991.9px) {
+                    width: 351px;
+                    height: 351px;
+                    right: 162px;
+                    top: 31px;
+                }
+                @include mixins.mobile {
+                    width: 289px;
+                    height: 289px;
+                    left: calc(50% - 289px / 2 + 24.5px);
+                    top: calc(50% - 289px / 2 - 35px);
+                }
+                @include mixins.xs {
+                    width: 289px;
+                    height: 289px;
+                    left: calc(50% - 289px / 2 + 24.5px);
+                    top: calc(50% - 289px / 2 - 35px);
+                }
+            }
+        }
+        &-cards {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: var(--card-padding-desktop);
+            min-height: 490px;
+            @media (min-width: 768px) and (max-width: 991.9px) {
+                max-width: 500px;
+                min-height: 375px;
+                padding: var(--card-padding-tablet);
+            }
+            @include mixins.mobile {
+                max-width: 500px;
+                min-height: 375px;
+                padding: var(--card-padding-mobile);
+            }
+            @include mixins.xs {
+                max-width: 500px;
+                min-height: 375px;
+                padding: var(--card-padding-mobile);
+            }
+        }
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__subtitle {
+        @include mixins.caption;
+    }
+    &__title {
+        @include mixins.h2;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gutter-desktop);
+        @include mixins.tablet {
+            gap: var(--gutter-tablet);
+        }
+        @include mixins.mobile {
+            gap: var(--gutter-mobile);
+        }
+        @include mixins.xs {
+            gap: var(--gutter-mobile);
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: stretch;
+        gap: var(--gap-desktop);
+        @include mixins.tablet {
+            gap: var(--gap-tablet);
+        }
+        @include mixins.mobile {
+            gap: var(--gap-mobile);
+        }
+        @include mixins.xs {
+            gap: var(--gap-mobile);
+        }
+        &-icon {
+            width: 64px;
+            min-width: 64px;
+            max-width: 64px;
+            height: 64px;
+            min-height: 64px;
+            max-height: 64px;
+            aspect-ratio: 1/1;
+            @include mixins.tablet {
+                width: 56px;
+                min-width: 56px;
+                max-width: 56px;
+                height: 56px;
+                min-height: 56px;
+                max-height: 56px;
+            }
+            @include mixins.mobile {
+                width: 48px;
+                min-width: 48px;
+                max-width: 48px;
+                height: 48px;
+                min-height: 48px;
+                max-height: 48px;
+            }
+            @include mixins.xs {
+                width: 48px;
+                min-width: 48px;
+                max-width: 48px;
+                height: 48px;
+                min-height: 48px;
+                max-height: 48px;
+            }
+        }
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &-title {
+            @include mixins.h3;
+        }
+        &-desc {
+            @include mixins.body-2;
+        }
+    }
+}
