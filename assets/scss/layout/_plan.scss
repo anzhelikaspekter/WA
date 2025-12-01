@@ -5,6 +5,7 @@
     display: flex;
     align-items: stretch;
     gap: var(--gap-desktop);
+    position: relative;
     @media (min-width: 768px) and (max-width: 991.9px) {
         flex-direction: column;
         gap: var(--gap-tablet);
@@ -27,35 +28,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
             &::before {
                 content: "";
                 position: absolute;
                 right: 54px;
-                top: 28px;
                 width: 382px;
                 height: 382px;
-
                 background: radial-gradient(circle, rgba(130, 194, 94, 0.35), rgba(130, 194, 94, 0));
                 filter: blur(75px);
                 z-index: 0;
                 pointer-events: none;
+                aspect-ratio: 1/1;
                 @media (min-width: 768px) and (max-width: 991.9px) {
                     width: 351px;
                     height: 351px;
                     right: 162px;
-                    top: 31px;
                 }
                 @include mixins.mobile {
                     width: 289px;
                     height: 289px;
-                    left: calc(50% - 289px / 2 + 24.5px);
-                    top: calc(50% - 289px / 2 - 35px);
+                    right: 50px;
                 }
                 @include mixins.xs {
                     width: 289px;
                     height: 289px;
-                    left: calc(50% - 289px / 2 + 24.5px);
-                    top: calc(50% - 289px / 2 - 35px);
+                    right: 50px;
                 }
             }
         }

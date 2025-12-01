@@ -172,6 +172,73 @@
     </header>
     <!-- MAIN CONTENT -->
     <main class="main" id="main">
+        <!-- TOP TOURS -->
+        <section class="section tours" id="tours" aria-labelledby="tours-title">
+            <header class="tours__header">
+                <p class="tours__subtitle">Top Picks of the Season</p>
+                <h2 id="tours-title" class="tours__title">Our Top Travel Destinations</h2>
+            </header>
+
+            <div class="tours__list" tabindex="0">
+                <div class="tours__list-inner">
+                    <article class="tours__card">
+                        <img loading="lazy" decoding="async" class="tours__card-img" src="assets/img/content/rome.webp"
+                            width="520" height="340" alt="Rome, Italy — 10-day trip">
+
+                        <div class="tours__card-content">
+                            <header class="tours__card-header">
+                                <h3 class="tours__card-title">Rome, Italy</h3>
+                                <p class="tours__card-price">$5,4k</p>
+                            </header>
+
+                            <p class="tours__card-duration">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/clock.svg" width="24"
+                                    height="24" class="tours__card-icon" aria-hidden="true">
+                                10 Days Trip
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="tours__card">
+                        <img loading="lazy" decoding="async" class="tours__card-img"
+                            src="assets/img/content/london.webp" width="520" height="340"
+                            alt="London, UK — 12-day trip">
+
+                        <div class="tours__card-content">
+                            <header class="tours__card-header">
+                                <h3 class="tours__card-title">London, UK</h3>
+                                <p class="tours__card-price">$4,2k</p>
+                            </header>
+
+                            <p class="tours__card-duration">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/clock.svg" width="24"
+                                    height="24" class="tours__card-icon" aria-hidden="true">
+                                12 Days Trip
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="tours__card">
+                        <img loading="lazy" decoding="async" class="tours__card-img"
+                            src="assets/img/content/helsinki.webp" width="520" height="340"
+                            alt="Helsinki, Finland — 28-day trip">
+
+                        <div class="tours__card-content">
+                            <header class="tours__card-header">
+                                <h3 class="tours__card-title">Helsinki, Finland</h3>
+                                <p class="tours__card-price">$15k</p>
+                            </header>
+
+                            <p class="tours__card-duration">
+                                <img loading="lazy" decoding="async" src="assets/img/icons/clock.svg" width="24"
+                                    height="24" class="tours__card-icon" aria-hidden="true">
+                                28 Days Trip
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
         <!-- PLAN YOUR TRIP -->
         <section class="section plan" id="plan" aria-labelledby="plan-title">
             <div class="plan__inner">
@@ -230,33 +297,41 @@
                             <h3 class="trip-card__title">Trip to Madeira</h3>
 
                             <p class="trip-card__date">
-                                <img loading="lazy" decoding="async" class="trip-card__date-icon" src="assets/img/icons/calendar.svg" alt="" aria-hidden="true">
+                                <img loading="lazy" decoding="async" class="trip-card__date-icon"
+                                    src="assets/img/icons/calendar.svg" alt="" aria-hidden="true">
                                 <span><time datetime="2025-05-12">12–21 May</time> | curated by Emily Ross</span>
                             </p>
 
                             <ul class="trip-card__facts">
                                 <li class="trip-card__facts-item">
-                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/camera.svg" alt="" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon"
+                                        src="assets/img/icons/camera.svg" alt="" aria-hidden="true">
                                 </li>
                                 <li class="trip-card__facts-item">
-                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/transfer.svg" alt="" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon"
+                                        src="assets/img/icons/transfer.svg" alt="" aria-hidden="true">
                                 </li>
                                 <li class="trip-card__facts-item">
-                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/map.svg" alt="" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon"
+                                        src="assets/img/icons/map.svg" alt="" aria-hidden="true">
                                 </li>
                                 <li class="trip-card__facts-item">
-                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/plane.svg" alt="" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon"
+                                        src="assets/img/icons/plane.svg" alt="" aria-hidden="true">
                                 </li>
                             </ul>
 
                             <div class="trip-card__footer">
                                 <p class="trip-card__travelers">
-                                    <img loading="lazy" decoding="async" src="assets/img/icons/group-people.svg" width="24" height="24" class="trip-card__travelers-icon" alt="" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" src="assets/img/icons/group-people.svg"
+                                        width="24" height="24" class="trip-card__travelers-icon" alt=""
+                                        aria-hidden="true">
                                     18 travelers confirmed
                                 </p>
 
                                 <button class="trip-card__like" aria-label="Save trip">
-                                    <img loading="lazy" decoding="async" src="assets/img/icons/heart.svg" alt="" aria-hidden="true" class="trip-card__like-icon">
+                                    <img loading="lazy" decoding="async" src="assets/img/icons/heart.svg" alt=""
+                                        aria-hidden="true" class="trip-card__like-icon">
                                 </button>
                             </div>
                         </div>
@@ -558,6 +633,7 @@
     <!-- Scripts -->
     <script src="assets/js/components/select.js" defer></script>
     <script src="assets/js/components/mobile-nav.js" defer></script>
+    <script src="assets/js/components/tours.js" defer></script>
     <script src="assets/js/components/tricker.js" defer></script>
     <script src="assets/js/components/testimonials.js" defer></script>
 </body>
