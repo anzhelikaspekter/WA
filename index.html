@@ -91,7 +91,7 @@
                         <a href="#reviews" class="nav__link">Reviews</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contacts" class="nav__link">Contacts</a>
+                        <a href="#footer" class="nav__link">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -172,8 +172,117 @@
     </header>
     <!-- MAIN CONTENT -->
     <main class="main" id="main">
+        <!-- PLAN YOUR TRIP -->
+        <section class="section plan" id="plan" aria-labelledby="plan-title">
+            <div class="plan__inner">
+                <header class="plan__header">
+                    <p class="plan__subtitle">Plan & Go</p>
+                    <h2 id="plan-title" class="plan__title">
+                        Plan Your Next Trip in&nbsp;3&nbsp;Easy Steps
+                    </h2>
+                </header>
+
+                <ul class="plan__list">
+                    <li class="plan__item">
+                        <img src="assets/img/icons/travel.svg" width="64" height="64" alt="" class="plan__item-icon">
+                        <div class="plan__item-inner">
+                            <h3 class="plan__item-title">Pick Your Destination</h3>
+                            <p class="plan__item-desc">
+                                Browse hand-selected places around the world and choose where your next adventure
+                                begins.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="plan__item">
+                        <img src="assets/img/icons/pay.svg" width="64" height="64" alt="" class="plan__item-icon">
+                        <div class="plan__item-inner">
+                            <h3 class="plan__item-title">Confirm &amp;&nbsp;Pay Securely</h3>
+                            <p class="plan__item-desc">
+                                Book in&nbsp;minutes with clear pricing and safe, fast payments. No&nbsp;hidden
+                                surprises.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="plan__item">
+                        <img src="assets/img/icons/bag.svg" width="64" height="64" alt="" class="plan__item-icon">
+                        <div class="plan__item-inner">
+                            <h3 class="plan__item-title">Head to&nbsp;the Airport</h3>
+                            <p class="plan__item-desc">
+                                Receive all trip details instantly and simply show up&nbsp;at&nbsp;the airport when it’s
+                                time to go.
+                                Your journey starts from there.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="plan__inner--visual">
+                <div class="plan__inner-cards">
+                    <article class="trip-card">
+                        <img loading="lazy" decoding="async" class="trip-card__img"
+                            src="assets/img/content/madeira.webp" width="520" height="340"
+                            alt="Coastal view of Madeira island with colorful boats">
+
+                        <div class="trip-card__content">
+                            <h3 class="trip-card__title">Trip to Madeira</h3>
+
+                            <p class="trip-card__date">
+                                <img loading="lazy" decoding="async" class="trip-card__date-icon" src="assets/img/icons/calendar.svg" alt="" aria-hidden="true">
+                                <span><time datetime="2025-05-12">12–21 May</time> | curated by Emily Ross</span>
+                            </p>
+
+                            <ul class="trip-card__facts">
+                                <li class="trip-card__facts-item">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/camera.svg" alt="" aria-hidden="true">
+                                </li>
+                                <li class="trip-card__facts-item">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/transfer.svg" alt="" aria-hidden="true">
+                                </li>
+                                <li class="trip-card__facts-item">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/map.svg" alt="" aria-hidden="true">
+                                </li>
+                                <li class="trip-card__facts-item">
+                                    <img loading="lazy" decoding="async" class="trip-card__facts-item-icon" src="assets/img/icons/plane.svg" alt="" aria-hidden="true">
+                                </li>
+                            </ul>
+
+                            <div class="trip-card__footer">
+                                <p class="trip-card__travelers">
+                                    <img loading="lazy" decoding="async" src="assets/img/icons/group-people.svg" width="24" height="24" class="trip-card__travelers-icon" alt="" aria-hidden="true">
+                                    18 travelers confirmed
+                                </p>
+
+                                <button class="trip-card__like" aria-label="Save trip">
+                                    <img loading="lazy" decoding="async" src="assets/img/icons/heart.svg" alt="" aria-hidden="true" class="trip-card__like-icon">
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="progress-card">
+                        <div class="progress-card__header">
+                            <img loading="lazy" decoding="async" src="assets/img/content/marocco.webp" width="64"
+                                height="64" alt="Morocco desert dunes" class="progress-card__img">
+                            <div class="progress-card__header-inner">
+                                <p class="progress-card__label">Currently Exploring</p>
+                                <h4 class="progress-card__title">Marocco</h4>
+                            </div>
+                        </div>
+                        <div class="progress-card__content">
+                            <p class="progress-card__percent"><span class="percent">65%</span> completed</p>
+                            <div class="progress-card__bar">
+                                <div class="progress-card__bar-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
         <!-- TESTIMONIALS -->
-        <section class="section testimonials">
+        <section class="section testimonials" id="reviews">
             <header class="testimonials__header">
                 <p class="testimonials__subtitle">Traveler Voices</p>
                 <h2 id="testimonials-title" class="testimonials__title">

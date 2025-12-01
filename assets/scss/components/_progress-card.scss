@@ -1,0 +1,142 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.progress-card {
+    width: 100%;
+    max-width: 277px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: var(--card-padding-desktop);
+    gap: var(--gap-desktop);
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    background: var(--color-neutral-100);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-lg);
+    @include mixins.tablet {
+        right: 0;
+        bottom: 80px;
+        padding: var(--card-padding-tablet);
+        gap: var(--gap-tablet);
+        border-radius: var(--radius-md);
+    }
+    @include mixins.mobile {
+        right: 0;
+        bottom: 80px;
+        padding: var(--card-padding-mobile);
+        gap: var(--gap-mobile);
+        border-radius: var(--radius-sm);
+    }
+    @include mixins.xs {
+        width: auto;
+        max-width: none;
+        right: 0;
+        bottom: 80px;
+        padding: var(--card-padding-mobile);
+        gap: var(--gap-mobile);
+        border-radius: var(--radius-sm);
+    }
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        gap: 12px;
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+    &__img {
+        width: 64px;
+        min-width: 64px;
+        max-width: 64px;
+        height: 64px;
+        min-height: 64px;
+        max-height: 64px;
+        border-radius: 12px;
+        aspect-ratio: 1/1;
+        @include mixins.tablet {
+            width: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            height: 56px;
+            min-height: 56px;
+            max-height: 56px;
+        }
+        @include mixins.mobile {
+            width: 48px;
+            min-width: 48px;
+            max-width: 48px;
+            height: 48px;
+            min-height: 48px;
+            max-height: 48px;
+        }
+        @include mixins.xs {
+            width: 48px;
+            min-width: 48px;
+            max-width: 48px;
+            height: 48px;
+            min-height: 48px;
+            max-height: 48px;
+        }
+    }
+    &__label {
+        @include mixins.caption;
+    }
+    &__title {
+        @include mixins.h3;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-left: 76px;
+        @include mixins.tablet {
+            padding-left: 68px;
+        }
+        @include mixins.mobile {
+            padding-left: 60px;
+        }
+        @include mixins.xs {
+            padding-left: 60px;
+        }
+    }
+    &__percent {
+        @include mixins.body-2;
+        & .percent {
+            @include mixins.body-1;
+            & {
+                color: var(--color-accent-primary);
+            }
+        }
+    }
+    &__bar {
+        width: 100%;
+        height: 5px;
+        background: var(--color-neutral-50);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        &-fill {
+            width: 100%;
+            height: 100%;
+            background: var(--color-accent-primary);
+            border-radius: inherit;
+            transform-origin: left;
+            transform: scaleX(0);
+            animation: barFill 3s ease forwards;
+        }
+    }
+}
+
+@keyframes barFill {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}

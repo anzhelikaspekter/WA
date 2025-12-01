@@ -11,9 +11,17 @@
 @use "components/button";
 @use "components/burger";
 @use "components/mobile-menu";
+@use "components/trip-card";
+@use "components/progress-card";
+@use "components/testimonial";
 @use "components/ticker";
+@use "components/subscribe";
+@use "components/footer-menu";
+@use "components/footer-social";
+@use "components/copyright";
 
 @use "layout/header";
+@use "layout/plan";
 @use "layout/testimonials";
 @use "layout/cta";
 @use "layout/footer";
