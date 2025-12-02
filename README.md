@@ -21,8 +21,8 @@
 ---
 
 ### 🎯 JSON reports
-- [📄 Before JSON](./media/json/before.json)
-- [📄 After JSON](./media/json/after.json)
+- [Before JSON](./media/json/before.json)
+- [After JSON](./media/json/after.json)
 
 ---
 
