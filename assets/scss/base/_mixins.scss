@@ -318,8 +318,8 @@
         background: var(--color-neutral-100);
     }
     &:active {
-        color: var(--color-neutral-50);
-        background: var(--color-accent-primary);
+        color: var(--color-primary-dark);
+        background: var(--color-neutral-300);
     }
     &:disabled {
         color: var(--color-primary-dark);

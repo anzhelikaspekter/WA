@@ -1,0 +1,112 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--card-padding-desktop);
+    background: #030712bf;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+    &--open {
+        opacity: 1;
+        visibility: visible;
+    }
+    &[hidden] {
+        display: none;
+    }
+    @include mixins.tablet {
+        padding: var(--card-padding-tablet);
+    }
+    @include mixins.mobile {
+        padding: var(--card-padding-mobile);
+    }
+    @include mixins.xs {
+        padding: var(--card-padding-mobile);
+    }
+    &__overlay {
+        position: absolute;
+        inset: 0;
+    }
+    &__dialog {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 960px;
+        background: var(--color-neutral-50);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+        @include mixins.tablet {
+            border-radius: var(--radius-md);
+        }
+        @include mixins.mobile {
+            border-radius: var(--radius-sm);
+        }
+        @include mixins.xs {
+            border-radius: var(--radius-sm);
+        }
+    }
+    &__close {
+        @include mixins.button-icon;
+        & {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+        &-icon {
+            @include mixins.icon;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        @include mixins.h2;
+        @include mixins.visually-hidden;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__video {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: var(--color-neutral-50);
+        @include mixins.tablet {
+            border-radius: var(--radius-sm);
+        }
+        @include mixins.mobile {
+            border-radius: var(--radius-xs);
+        }
+        @include mixins.xs {
+            border-radius: var(--radius-xs);
+        }
+        .modal__video-el {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}

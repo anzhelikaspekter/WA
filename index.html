@@ -172,6 +172,28 @@
     </header>
     <!-- MAIN CONTENT -->
     <main class="main" id="main">
+        <!-- HERO -->
+        <section class=" section hero">
+            <div class="hero__inner">
+                <header class="hero__header">
+                    <p class="hero__subtitle">Travel Made Easy, Comfortable, and Inspiring</p>
+                    <h2 id="hero-title" class="hero__title">Travel, explore, and embrace your next great adventure</h2>
+                </header>
+                <p class="hero__desc">Plan unforgettable trips with ease and confidence. From top destinations
+                    to&nbsp;seamless booking, we&nbsp;helps you explore the world the way you want.</p>
+                <div class="hero__btns">
+                    <button type="button" class="hero__btn primary">Start Planning</button>
+                    <button type="button" class="hero__btn ghost" data-modal-open="preview-modal" aria-haspopup="dialog"
+                        aria-controls="preview-modal">
+                        <img src="assets/img/icons/play.svg" width="24" height="24" alt="" class="hero__btn-icon">
+                        <span>Watch Preview</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero__inner--visual">
+
+            </div>
+        </section>
         <!-- OFFER -->
         <section class="section offer" id="destinations" aria-labelledby="offer-title">
             <header class="offer__header">
@@ -184,15 +206,17 @@
                         <img src="assets/img/icons/weather.svg" width="64" height="64" alt="Travel weather icon"
                             class="destination-card__icon">
                         <h3 class="destination-card__title">Travel Weather</h3>
-                        <p class="destination-card__desc">Get accurate weather insights for every destination to&nbsp;plan your trip with confidence.</p>
+                        <p class="destination-card__desc">Get accurate weather insights for every destination
+                            to&nbsp;plan your trip with confidence.</p>
                     </article>
                 </li>
                 <li class="offer__item">
                     <article class="destination-card">
-                        <img src="assets/img/icons/experiences.svg" width="64" height="64" alt="Local experiences icon" 
+                        <img src="assets/img/icons/experiences.svg" width="64" height="64" alt="Local experiences icon"
                             class="destination-card__icon">
                         <h3 class="destination-card__title">Local Experiences</h3>
-                        <p class="destination-card__desc">Discover unique activities, festivals and events that bring each destination to&nbsp;life.</p>
+                        <p class="destination-card__desc">Discover unique activities, festivals and events that bring
+                            each destination to&nbsp;life.</p>
                     </article>
                 </li>
                 <li class="offer__item">
@@ -200,7 +224,8 @@
                         <img src="assets/img/icons/flight-plane.svg" width="64" height="64" alt="Flight booking icon"
                             class="destination-card__icon">
                         <h3 class="destination-card__title">Best Flight Options</h3>
-                        <p class="destination-card__desc">Find ideal flights with the best routes, prices and schedules&nbsp;&mdash; all in&nbsp;one place.</p>
+                        <p class="destination-card__desc">Find ideal flights with the best routes, prices and
+                            schedules&nbsp;&mdash; all in&nbsp;one place.</p>
                     </article>
                 </li>
                 <li class="offer__item">
@@ -208,7 +233,8 @@
                         <img src="assets/img/icons/trips.svg" width="64" height="64" alt="Personalized trips icon"
                             class="destination-card__icon">
                         <h3 class="destination-card__title">Personalized Trips</h3>
-                        <p class="destination-card__desc">Enjoy custom itineraries tailored to&nbsp;your interests, budget, and travel style.</p>
+                        <p class="destination-card__desc">Enjoy custom itineraries tailored to&nbsp;your interests,
+                            budget, and travel style.</p>
                     </article>
                 </li>
             </ul>
@@ -671,12 +697,35 @@
             <p class="caption">2025&nbsp;&copy; All rights Reserved.</p>
         </div>
     </footer>
+    <!-- Modal -->
+    <section class="modal modal--open" id="preview-modal" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title" hidden>
+        <div class="modal__overlay" data-modal-close></div>
+
+        <div class="modal__dialog">
+            <button type="button" class="modal__close" aria-label="Close preview" data-modal-close>
+                <img src="assets/img/icons/close.svg" width="24" height="24" alt="" class="modal__close-icon">
+            </button>
+            <header class="modal__header">
+                <h2 id="preview-modal-title" class="modal__title">
+                    Trip Preview
+                </h2>
+            </header>
+
+            <div class="modal__body">
+                <div class="modal__video">
+                    <video class="modal__video-el" src="assets/video/trip-preview.mp4" controls
+                        preload="metadata"></video>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Scripts -->
     <script src="assets/js/components/select.js" defer></script>
     <script src="assets/js/components/mobile-nav.js" defer></script>
     <script src="assets/js/components/tours.js" defer></script>
     <script src="assets/js/components/tricker.js" defer></script>
     <script src="assets/js/components/testimonials.js" defer></script>
+    <script src="assets/js/components/modal.js" defer></script>
 </body>
 
 </html>

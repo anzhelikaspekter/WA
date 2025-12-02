@@ -20,8 +20,10 @@
 @use "components/footer-menu";
 @use "components/footer-social";
 @use "components/copyright";
+@use "components/modal";
 
 @use "layout/header";
+@use "layout/hero";
 @use "layout/offer";
 @use "layout/tours";
 @use "layout/plan";
