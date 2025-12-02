@@ -57,7 +57,7 @@
         min-height: 64px;
         max-height: 64px;
         border-radius: 12px;
-        aspect-ratio: 1/1;
+        object-fit: cover;
         @include mixins.tablet {
             width: 56px;
             min-width: 56px;
