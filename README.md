@@ -12,17 +12,17 @@
 
 ---
 
-### 🖼 Before / After (Screenshots)
+### 🖼 Before / After 
 
-| Before | After |
-|--------|-------|
-| <img src="./media/lh-before.png" width="420"/> | <img src="./media/lh-after.png" width="420"/> |
+| <img src="./media/lighthouse/before.png" width="420"/> | <img src="./media/lighthouse/after.png" width="420"/> |
+|:--:|:--:|
+| **Before** | **After** |
 
 ---
 
 ### 🎯 JSON reports
-- [📄 Before JSON](./media/lh-before.json)
-- [📄 After JSON](./media/lh-after.json)
+- [📄 Before JSON](./media/json/before.json)
+- [📄 After JSON](./media/json/after.json)
 
 ---
 
