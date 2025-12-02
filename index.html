@@ -698,7 +698,8 @@
         </div>
     </footer>
     <!-- Modal -->
-    <section class="modal modal--open" id="preview-modal" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title" hidden>
+    <section class="modal modal--open" id="preview-modal" role="dialog" aria-modal="true"
+        aria-labelledby="preview-modal-title" hidden>
         <div class="modal__overlay" data-modal-close></div>
 
         <div class="modal__dialog">
@@ -713,8 +714,10 @@
 
             <div class="modal__body">
                 <div class="modal__video">
-                    <video class="modal__video-el" src="assets/video/trip-preview.mp4" controls
-                        preload="metadata"></video>
+                    <video class="modal__video-el" controls preload="metadata">
+                        <source src="https://github.com/anzhelikaspekter/WA/releases/download/v1.0/trip-preview.webm"
+                            type="video/webm">
+                    </video>
                 </div>
             </div>
         </div>
