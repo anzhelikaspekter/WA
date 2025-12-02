@@ -1377,27 +1377,14 @@ body.no-scroll {
 }
 .trip-card__img {
   width: 100%;
-  max-height: 200px;
+  max-height: 100%;
+}
+.trip-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--radius-md);
-  aspect-ratio: 3/4;
-}
-@media (min-width: 768px) and (max-width: 1279.9px) {
-  .trip-card__img {
-    max-height: 190px;
-    border-radius: var(--radius-sm);
-  }
-}
-@media (min-width: 465px) and (max-width: 767.9px) {
-  .trip-card__img {
-    max-height: 180px;
-    border-radius: 12px;
-  }
-}
-@media (max-width: 464.9px) {
-  .trip-card__img {
-    max-height: 180px;
-    border-radius: 12px;
-  }
 }
 .trip-card__content {
   display: flex;
@@ -3292,35 +3279,6 @@ body.no-scroll {
   min-height: 700px;
   overflow: hidden;
 }
-.hero__inner--visual::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(232, 155, 42, 0.35), rgba(232, 155, 42, 0));
-  filter: blur(75px);
-  z-index: 0;
-  pointer-events: none;
-  aspect-ratio: 1/1;
-}
-@media (min-width: 768px) and (max-width: 1279.9px) {
-  .hero__inner--visual::before {
-    width: 515px;
-    height: 515px;
-  }
-}
-@media (min-width: 465px) and (max-width: 767.9px) {
-  .hero__inner--visual::before {
-    width: 328px;
-    height: 355px;
-  }
-}
-@media (max-width: 464.9px) {
-  .hero__inner--visual::before {
-    width: 328px;
-    height: 355px;
-  }
-}
 @media (min-width: 768px) and (max-width: 1279.9px) {
   .hero__inner--visual {
     width: 100%;
@@ -3823,7 +3781,11 @@ body.no-scroll {
 }
 .tours__card-img {
   width: 100%;
-  height: 347px;
+  height: 327px;
+}
+.tours__card-img img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

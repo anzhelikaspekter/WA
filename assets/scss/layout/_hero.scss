@@ -40,30 +40,6 @@
             justify-content: center;
             min-height: 700px;
             overflow: hidden;
-            &::before {
-                content: "";
-                position: absolute;
-                width: 600px;
-                height: 600px;
-                background: radial-gradient(circle, rgba(232, 155, 42, 0.35), rgba(232, 155, 42, 0));
-                filter: blur(75px);
-                z-index: 0;
-                pointer-events: none;
-                aspect-ratio: 1/1;
-
-                @include mixins.tablet {
-                    width: 515px;
-                    height: 515px;
-                }
-                @include mixins.mobile {
-                    width: 328px;
-                    height: 355px;
-                }
-                @include mixins.xs {
-                    width: 328px;
-                    height: 355px;
-                }
-            }
             @include mixins.tablet {
                 width: 100%;
                 min-height: 650px;

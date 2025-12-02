@@ -57,8 +57,13 @@
     </noscript>
 
     <!-- Preload LCP -->
+    <link rel="preload" as="image" imagesrcset="assets/img/hero/desktop-main.webp 1x, assets/img/hero/desktop-main-x2.webp 2x" imagesizes="100vw" href="assets/img/hero/desktop-main.webp">
+    <link rel="preload" as="image" href="assets/img/hero/tablet-main.webp"
+        media="(min-width: 768px) and (max-width: 991.9px)" imagesrcset="
+        assets/img/hero/tablet-main.webp 768w" imagesizes="100vw" type="image/webp">
+    <link rel="preload" as="image" href="assets/img/hero/mobile-main.webp" media="(max-width: 767.9px)" imagesrcset="
+        assets/img/hero/mobile-main.webp 480w" imagesizes="100vw" type="image/webp">
     <link rel="preload" as="image" href="assets/img/content/cta.webp" imagesrcset="assets/img/content/cta.webp">
-
 
     <!-- Styles -->
     <link rel="preload" href="assets/css/style.min.css" as="style">
@@ -192,24 +197,17 @@
             </div>
             <div class="hero__inner--visual">
                 <picture class="hero__inner-img-main">
-                    <source srcset="assets/img/hero/desktop-main.webp" width="750" height="750"
-                        media="(min-width: 1280px)" type="image/webp">
-                    <source srcset="assets/img/hero/desktop-main.webp" width="750" height="750"
-                        media="(min-width: 1280px)">
+                    <source srcset="assets/img/hero/desktop-main.webp 1x, assets/img/hero/desktop-main-x2.webp 2x"
+                        media="(min-width: 992px)" type="image/webp">
 
-                    <source srcset="assets/img/hero/tablet-main.webp" width="750" height="700"
+                    <source srcset="assets/img/hero/tablet-main.webp 1x, assets/img/hero/desktop-main.webp 1x"
                         media="(min-width: 768px)" type="image/webp">
-                    <source srcset="assets/img/hero/tablet-main.webp" width="750" height="700"
-                        media="(min-width: 768px)">
 
-                    <source srcset="assets/img/hero/mobile-main.webp" width="400" height="450"
-                        media="(max-width: 767.9px)" type="image/webp">
-                    <source srcset="assets/img/hero/mobile-main.webp" width="400" height="450"
-                        media="(max-width: 767.9px)">
+                    <source srcset="assets/img/hero/mobile-main.webp 1x, assets/img/hero/tablet-main.webp 1x"
+                        media="(max-width: 767px)" type="image/webp">
 
-                    <img src="assets/img/hero/mobile-main.webp"
-                        alt="Traveler sitting with suitcases ready for a new adventure" width="650" height="650"
-                        loading="lazy" decoding="async">
+                    <img src="assets/img/hero/desktop-main-x2.webp"
+                        alt="Traveler sitting with suitcases ready for a new adventure" width="750" height="750">
                 </picture>
             </div>
         </section>
@@ -222,8 +220,8 @@
             <ul class="offer__list">
                 <li class="offer__item">
                     <article class="destination-card">
-                        <img src="assets/img/icons/weather.svg" width="64" height="64" alt="Travel weather icon"
-                            class="destination-card__icon">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/weather.svg" width="64" height="64"
+                            alt="Travel weather icon" class="destination-card__icon">
                         <h3 class="destination-card__title">Travel Weather</h3>
                         <p class="destination-card__desc">Get accurate weather insights for every destination
                             to&nbsp;plan your trip with confidence.</p>
@@ -231,8 +229,8 @@
                 </li>
                 <li class="offer__item">
                     <article class="destination-card">
-                        <img src="assets/img/icons/experiences.svg" width="64" height="64" alt="Local experiences icon"
-                            class="destination-card__icon">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/experiences.svg" width="64"
+                            height="64" alt="Local experiences icon" class="destination-card__icon">
                         <h3 class="destination-card__title">Local Experiences</h3>
                         <p class="destination-card__desc">Discover unique activities, festivals and events that bring
                             each destination to&nbsp;life.</p>
@@ -240,8 +238,8 @@
                 </li>
                 <li class="offer__item">
                     <article class="destination-card">
-                        <img src="assets/img/icons/flight-plane.svg" width="64" height="64" alt="Flight booking icon"
-                            class="destination-card__icon">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/flight-plane.svg" width="64"
+                            height="64" alt="Flight booking icon" class="destination-card__icon">
                         <h3 class="destination-card__title">Best Flight Options</h3>
                         <p class="destination-card__desc">Find ideal flights with the best routes, prices and
                             schedules&nbsp;&mdash; all in&nbsp;one place.</p>
@@ -249,8 +247,8 @@
                 </li>
                 <li class="offer__item">
                     <article class="destination-card">
-                        <img src="assets/img/icons/trips.svg" width="64" height="64" alt="Personalized trips icon"
-                            class="destination-card__icon">
+                        <img loading="lazy" decoding="async" src="assets/img/icons/trips.svg" width="64" height="64"
+                            alt="Personalized trips icon" class="destination-card__icon">
                         <h3 class="destination-card__title">Personalized Trips</h3>
                         <p class="destination-card__desc">Enjoy custom itineraries tailored to&nbsp;your interests,
                             budget, and travel style.</p>
@@ -268,8 +266,14 @@
             <div class="tours__list" tabindex="0">
                 <div class="tours__list-inner">
                     <article class="tours__card">
-                        <img loading="lazy" decoding="async" class="tours__card-img" src="assets/img/content/rome.webp"
-                            width="520" height="340" alt="Rome, Italy — 10-day trip">
+                        <picture class="tours__card-img">
+                            <source type="image/webp"
+                                srcset="assets/img/content/rome-520.webp 520w, assets/img/content/rome-1040.webp 1040w"
+                                sizes="(min-width: 1280px) 320px">
+
+                            <img src="assets/img/content/rome-520.webp" width="520" height="340" loading="lazy"
+                                decoding="async" alt="Rome, Italy — 10-day trip">
+                        </picture>
 
                         <div class="tours__card-content">
                             <header class="tours__card-header">
@@ -286,9 +290,14 @@
                     </article>
 
                     <article class="tours__card">
-                        <img loading="lazy" decoding="async" class="tours__card-img"
-                            src="assets/img/content/london.webp" width="520" height="340"
-                            alt="London, UK — 12-day trip">
+                        <picture class="tours__card-img">
+                            <source type="image/webp"
+                                srcset="assets/img/content/london-520.webp 520w, assets/img/content/london-1040.webp 1040w"
+                                sizes="(min-width: 1280px) 320px">
+
+                            <img src="assets/img/content/london-520.webp" width="520" height="340" loading="lazy"
+                                decoding="async" alt="London, UK — 12-day trip">
+                        </picture>
 
                         <div class="tours__card-content">
                             <header class="tours__card-header">
@@ -305,9 +314,14 @@
                     </article>
 
                     <article class="tours__card">
-                        <img loading="lazy" decoding="async" class="tours__card-img"
-                            src="assets/img/content/helsinki.webp" width="520" height="340"
-                            alt="Helsinki, Finland — 28-day trip">
+                        <picture class="tours__card-img">
+                            <source type="image/webp"
+                                srcset="assets/img/content/helsinki-520.webp 520w, assets/img/content/helsinki-1040.webp 1040w"
+                                sizes="(min-width: 1280px) 320px">
+
+                            <img src="assets/img/content/helsinki-520.webp" width="520" height="340" loading="lazy"
+                                decoding="async" alt="Helsinki, Finland — 28-day trip">
+                        </picture>
 
                         <div class="tours__card-content">
                             <header class="tours__card-header">
@@ -375,9 +389,14 @@
             <div class="plan__inner--visual">
                 <div class="plan__inner-cards">
                     <article class="trip-card">
-                        <img loading="lazy" decoding="async" class="trip-card__img"
-                            src="assets/img/content/madeira.webp" width="520" height="340"
-                            alt="Coastal view of Madeira island with colorful boats">
+                        <picture class="trip-card__img">
+                            <source type="image/webp"
+                                srcset="assets/img/content/madeira-520.webp 520w, assets/img/content/madeira-1040.webp 1040w"
+                                sizes="(min-width: 1280px) 320px, (min-width: 768px) 45vw, 90vw">
+
+                            <img src="assets/img/content/madeira-520.webp" width="520" height="340" loading="lazy"
+                                decoding="async" alt="Coastal view of Madeira island with colorful boats">
+                        </picture>
 
                         <div class="trip-card__content">
                             <h3 class="trip-card__title">Trip to Madeira</h3>
@@ -723,7 +742,8 @@
 
         <div class="modal__dialog">
             <button type="button" class="modal__close" aria-label="Close preview" data-modal-close>
-                <img src="assets/img/icons/close.svg" width="24" height="24" alt="" class="modal__close-icon">
+                <img src="assets/img/icons/close.svg" width="24" height="24" alt="" class="modal__close-icon"
+                    loading="lazy" decoding="async">
             </button>
             <header class="modal__header">
                 <h2 id="preview-modal-title" class="modal__title">

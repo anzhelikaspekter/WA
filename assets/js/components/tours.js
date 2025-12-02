@@ -30,28 +30,30 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => (isScrolling = false), 350);
     }
 
-    // ------- TOUCH-SCROLL (only by step) -------
     let startX = 0;
-    let endX = 0;
+    let startY = 0;
 
     list.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX;
-    });
+        startY = e.touches[0].clientY;
+    }, { passive: true });
 
     list.addEventListener("touchend", (e) => {
         endX = e.changedTouches[0].clientX;
         const diff = endX - startX;
 
-        if (Math.abs(diff) < 50) return; // защита от случайных слабых свайпов
+        if (Math.abs(diff) < 50) return;
 
-        if (diff < 0) scrollToStep(1);   // свайп влево → следующий
-        else scrollToStep(-1);          // свайп вправо → предыдущий
+        if (diff < 0) scrollToStep(1);
+        else scrollToStep(-1);
     });
 
-
-    // Отключаем нативный «инерционный» горизонтальный скролл,
-    // чтобы не было свободного перетягивания
     list.addEventListener("touchmove", (e) => {
-        e.preventDefault();   // но работает только с passive: false
+        const dx = Math.abs(e.touches[0].clientX - startX);
+        const dy = Math.abs(e.touches[0].clientY - startY);
+
+        if (dx > dy) {
+            e.preventDefault();
+        }
     }, { passive: false });
 });
