@@ -4,8 +4,8 @@ A clean and minimalistic travel landing page built with semantic HTML, modular S
 Fully responsive layout with optimized assets, accessibility support and CI/CD deployment.
 
 <!--
-🔗 **Live Demo:** https://your-live-demo-link.com  
-🎨 **Figma Prototype:** https://your-figma-link.com  
+🔗 [**Live Demo:**](https://anzhelikaspekter.github.io/WA/prod/)
+🎨 [**Figma Prototype:**](https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdeb1e0c-8a6f-4a92-82bc-e857690f8810/deploy-status)](https://app.netlify.com/projects/wanderlust-adventures-lp/deploys)
 -->
 
@@ -60,13 +60,13 @@ prod/
 
 ## 📊 Lighthouse Metrics — Before → After Optimization
 
-### 🔥 Summary
-| Metric | Before | After | Improvement |
-|--------|--------|--------|--------------|
-| **Performance** | ![](https://img.shields.io/badge/69-red) | ![](https://img.shields.io/badge/98-brightgreen) | ↑ +29 |
-| **Accessibility** | ![](https://img.shields.io/badge/97-brightgreen) | ![](https://img.shields.io/badge/98-brightgreen) | ↑ +1 |
-| **Best Practices** | ![](https://img.shields.io/badge/71-orange) | ![](https://img.shields.io/badge/100-brightgreen) | ↑ +29 |
-| **SEO** | ![](https://img.shields.io/badge/100-brightgreen) | ![](https://img.shields.io/badge/100-brightgreen) | — |
+| Metric            | Before                                   | After                                    | Improvement |
+|-------------------|-------------------------------------------|-------------------------------------------|-------------|
+| **Performance**   | ![](https://img.shields.io/badge/69-red)  | ![](https://img.shields.io/badge/98-brightgreen)  | ↑ +29       |
+| **Accessibility** | ![](https://img.shields.io/badge/97-brightgreen) | ![](https://img.shields.io/badge/98-brightgreen) | ↑ +1        |
+| **Best Practices**| ![](https://img.shields.io/badge/71-orange) | ![](https://img.shields.io/badge/100-brightgreen) | ↑ +29       |
+| **SEO**           | ![](https://img.shields.io/badge/100-brightgreen) | ![](https://img.shields.io/badge/100-brightgreen) | —           |
+
 
 ---
 
