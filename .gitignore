@@ -1,2 +1,5 @@
 # Ignore large video formats
 *.mp4
+
+# Local Netlify folder
+.netlify
