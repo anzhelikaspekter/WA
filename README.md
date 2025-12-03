@@ -6,8 +6,8 @@ Fully responsive layout with optimized assets, accessibility support and CI/CD d
 <!--
 🔗 **Live Demo:** https://your-live-demo-link.com  
 🎨 **Figma Prototype:** https://your-figma-link.com  
--->
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdeb1e0c-8a6f-4a92-82bc-e857690f8810/deploy-status)](https://app.netlify.com/projects/wanderlust-adventures-lp/deploys)
+-->
 
 ---
 
@@ -37,22 +37,22 @@ Fully responsive layout with optimized assets, accessibility support and CI/CD d
 ## 📁 Project Structure
 
 prod/
-├── assets/
-│ ├── css/
-│ ├── img/
-│ │ ├── badges/
-│ │ ├── content/
-│ │ ├── favicons/
-│ │ ├── hero/
-│ │ ├── icons/
-│ │ ├── og/
-│ │ ├── partners/
-│ │ ├── personal/
-│ │ └── ui/
-│ ├── js/
-│ └── scss/
-├── index.html
-└── site.webmanifest
+ ├── assets/
+ │    ├── css/
+ │    ├── img/
+ │    │    ├── badges/
+ │    │    ├── content/
+ │    │    ├── favicons/
+ │    │    ├── hero/
+ │    │    ├── icons/
+ │    │    ├── og/
+ │    │    ├── partners/
+ │    │    ├── personal/
+ │    │    └── ui/
+ │    ├── js/
+ │    └── scss/
+ ├── index.html
+ └── site.webmanifest
 
 ---
 
