@@ -36,6 +36,7 @@ Fully responsive layout with optimized assets, accessibility support and CI/CD d
 
 ## 📁 Project Structure
 
+```  
 prod/
  ├── assets/
  │    ├── css/
@@ -53,6 +54,7 @@ prod/
  │    └── scss/
  ├── index.html
  └── site.webmanifest
+```
 
 ---
 
