@@ -5,10 +5,7 @@ Fully responsive layout with optimized assets, accessibility support and CI/CD d
 
 🔗 [**Live Demo**](https://anzhelikaspekter.github.io/WA/prod/)  
 🎨 [**Figma Prototype**](https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1)  
-🎨 [**Details Case**]([https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1](https://anzhelikaspekter.notion.site/Wanderlust-Adventures-Landing-Page-Redesign-Rebuild-2bfd69b00e74808db9f6c2b9b44bd96a)
-🔗 [**Live Demo**](https://anzhelikaspekter.github.io/WA/prod/)  
-🎨 [**Figma Prototype**](https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1)
-🎨 [**Details Case**]([https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1](https://anzhelikaspekter.notion.site/Wanderlust-Adventures-Landing-Page-Redesign-Rebuild-2bfd69b00e74808db9f6c2b9b44bd96a))
+🎨 [**Details Case**](https://anzhelikaspekter.notion.site/Wanderlust-Adventures-Landing-Page-Redesign-Rebuild-2bfd69b00e74808db9f6c2b9b44bd96a)
 <!--
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdeb1e0c-8a6f-4a92-82bc-e857690f8810/deploy-status)](https://app.netlify.com/projects/wanderlust-adventures-lp/deploys)
 -->
