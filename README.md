@@ -3,7 +3,7 @@
 A clean and minimalistic travel landing page built with semantic HTML, modular SCSS architecture and lightweight JavaScript.  
 Fully responsive layout with optimized assets, accessibility support and CI/CD deployment.
 
-🔗 [**Live Demo**](https://anzhelikaspekter.github.io/WA/prod/)  
+🔗 [**Live Demo**](https://wanderlast-adventures.spekter.solutions/)  
 <!--
 🎨 [**Figma Prototype**](https://www.figma.com/proto/WDHkUAoyWSqnhHNaazR2GC/Travel-Agency-Landing-Page-UI?page-id=101%3A766&node-id=101-768&p=f&viewport=240%2C336%2C0.17&t=p8eKyxgrSA6dnUU9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=101%3A768&show-proto-sidebar=1)  
 📃 [**Details Case**](https://anzhelikaspekter.notion.site/Wanderlust-Adventures-Landing-Page-Redesign-Rebuild-2bfd69b00e74808db9f6c2b9b44bd96a)
